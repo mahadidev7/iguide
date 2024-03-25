@@ -191,11 +191,34 @@ i {
   background: #fff;
   border: 1px solid #ddd;
   margin-top: 10px;
-  /* cursor: pointer; */
+  height: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  overflow: hidden;
+}
+.mahadidev7_accordingItem:nth-child(1){
+  border: 1px solid #99dbba;
+}
+.mahadidev7_accordingItem:nth-child(2){
+  border: 1px solid #ecc6c6;
+}
+.mahadidev7_accordingItem:nth-child(3){
+  border: 1px solid #b1e2b1;
+}
+.mahadidev7_accordingItem:nth-child(4){
+  border: 1px solid #c3c3e6;
 }
 
 .mahadidev7_accordingHeader {
-  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  /* padding: 0 15px; */
+  height: 64px !important;
   background: #eee;
   /* border-radius: 5px; */
 }
@@ -209,6 +232,69 @@ i {
   padding: 15px;
   margin: 20px 0;
   height: unset !important;;
+}
+
+.step_oneHead{
+  background: #E0F5F5;
+  /* height: 64px; */
+}
+.mahadidev7_accordingHeader h4{
+  background: #118C4F;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.step_twoHead{
+  background: #FFB79B;
+}
+
+.mahadidev7_accordingHeader.step_twoHead h4{
+  background: #FF6666;
+}
+
+.step_ThreeHead{
+  background: #B2D8B2;
+}
+
+.mahadidev7_accordingHeader.step_ThreeHead h4{
+  background: #008000;
+}
+
+.step_fourHead{
+  background: #CADBFE;
+}
+
+.mahadidev7_accordingHeader.step_fourHead h4{
+  background: #0000FF;
+}
+
+.resultQuestion{
+  color: #222 !important;
+  font-size: 18px;
+  font-weight: bold !important;
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+.resultAnswer{
+  padding: 2px;
+  font-size: 16px;
+}
+.result{
+  flex: 1;
+}
+.edit{
+  /* background: #000; */
+  height: 100%;
+  padding: 20px;
+  border-left: 1px solid #fff;
+  cursor:pointer;
+}
+.edit i {
+  font-size: 20px;
 }
 
 /* according stye end  */
@@ -326,6 +412,7 @@ i {
 .closeMenu i {
   float: right;
   color: #000;
+  cursor: pointer;
 }
 
 

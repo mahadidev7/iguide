@@ -12,6 +12,12 @@ let step2b = document.querySelectorAll(".step2b");
 let mobileMenu = document.querySelectorAll(".mobileMenu")[0];
 let closeMenu = document.querySelectorAll(".closeMenu");
 
+let step_oneItem = document.querySelectorAll(".step_oneItem")[0];
+let step_twoItem = document.querySelectorAll(".step_twoItem")[0];
+let step_threeItem = document.querySelectorAll(".step_threeItem")[0];
+let step_fourItem = document.querySelectorAll(".step_fourItem")[0];
+
+
 // hare is contact page all value
 let contactPageAllFormValues = {
   StartByDescribingYourIssue: "", //Start by describing your issue
@@ -28,22 +34,25 @@ let removeAllActiveClass = () => {
   }
 };
 
-function setValue() {
-  let StartByDescribingYourIssue = document.getElementsByClassName("StartByDescribingYourIssue");
-  let step2a_btn = document.querySelectorAll("step2a_btn");
-//   let StartByDescribingYourIssue = document.getElementsByClassName("StartByDescribingYourIssue");
-//   let StartByDescribingYourIssue = document.getElementsByClassName("StartByDescribingYourIssue");
-//   let StartByDescribingYourIssue = document.getElementsByClassName("StartByDescribingYourIssue");
-//   let StartByDescribingYourIssue = document.getElementsByClassName("StartByDescribingYourIssue");
+function removeAllValueInnerText() {
+  let resultQuestion = document.querySelectorAll(".resultQuestion");
+  let resultAnswer = document.querySelectorAll(".resultAnswer");
+  let editGroup = document.querySelectorAll(".editGroup");
 
-  StartByDescribingYourIssue[0].value = contactPageAllFormValues?.StartByDescribingYourIssue
-
-  for (let i = 0; i < step2a_btn.length; i++) {
-    console.log('====================================');
-    console.log(step2a_btn);
-    console.log('====================================');
+  for (let key in resultQuestion) {
+    const value = resultQuestion[key];
+    value.innerText = ""
+  }
+  for (let key in resultAnswer) {
+    const value = resultAnswer[key];
+    value.innerText = ""
+  }
+  for (let key in editGroup) {
+    const value = editGroup[key];
+    value.innerText = ""
   }
 
+  contactPageAllFormValues = {}
 }
 
 // step 1 form handler
@@ -53,7 +62,14 @@ function stepOneHandler() {
   contactPageAllFormValues["StartByDescribingYourIssue"] = value;
   removeAllActiveClass();
   step_two[0].classList.add("active");
-//   setValue()
+
+  document.querySelectorAll(".step_oneHead .resultQuestion")[0].innerText =
+    "Start by describing your issue";
+  document.querySelectorAll(".step_oneHead .resultAnswer")[0].innerText = value;
+
+  document.querySelectorAll(".editGroup")[0].innerHTML = `<div class="edit">
+  <i class="fa-solid fa-pen-to-square"></i>
+</div>`;
 }
 
 // step 2 form handler
@@ -62,7 +78,10 @@ function step2aHandler(data) {
   contactPageAllFormValues["ChooseTheBestDescriptionOfYourIssue"] = data;
   step2a[0].style.display = "none";
   step2b[0].style.display = "block";
-  // contactPageAllFormValues.ChooseTheBestDescriptionOfYourIssue === true ? "" : ""
+
+  document.querySelectorAll(".step_twoHead .resultQuestion")[0].innerText =
+    "Choose the best description of your issue";
+  document.querySelectorAll(".step_twoHead .resultAnswer")[0].innerText = data;
 }
 // 2b
 function step2bHandler() {
@@ -71,6 +90,20 @@ function step2bHandler() {
   contactPageAllFormValues["addAdditionalDetailsIfYouLikeOrNot"] = value;
   removeAllActiveClass();
   step_three[0].classList.add("active");
+
+  step2a[0].style.display = "block";
+  step2b[0].style.display = "none";
+
+  document.querySelectorAll(".step_twoHead .resultQuestion")[0].innerText =
+    "Choose the best description of your issue, Add additional details if you like ... or not.";
+  document.querySelectorAll(".step_twoHead .resultAnswer")[0].innerText =
+    document.querySelectorAll(".step_twoHead .resultAnswer")[0].textContent +
+    "," +
+    value;
+
+  document.querySelectorAll(".editGroup")[1].innerHTML = `<div class="edit">
+  <i class="fa-solid fa-pen-to-square"></i>
+</div>`;
 }
 
 // step 3 form handler
@@ -84,13 +117,62 @@ function stepThreeHandler() {
   contactPageAllFormValues["lastName"] = lastName;
   removeAllActiveClass();
   step_four[0].classList.add("active");
+
+  document.querySelectorAll(".step_ThreeHead .resultQuestion")[0].innerText =
+    "Your Contact Details";
+  document.querySelectorAll(".step_ThreeHead .resultAnswer")[0].innerText =
+    email + "," + firstName + "," + lastName;
+
+  document.querySelectorAll(".step_fourHead .resultQuestion")[0].innerText =
+    "Success";
+
+  document.querySelectorAll(".editGroup")[2].innerHTML = `<div class="edit">
+  <i class="fa-solid fa-pen-to-square"></i>
+</div>`;
+
+  removeAllValueInnerText();
 }
 
-// menu open handler 
+// menu open handler
 function openMenuHandler() {
-    mobileMenu.style.display = "block";
+  mobileMenu.style.display = "block";
 }
-// menu close handler 
+// menu close handler
 function closeMenuHandler() {
-    mobileMenu.style.display = "none";
+  mobileMenu.style.display = "none";
 }
+
+step_oneItem.addEventListener("click", function () {
+  if (!!contactPageAllFormValues?.StartByDescribingYourIssue) {
+    removeAllActiveClass();
+    step_one[0].classList.add("active");
+  }
+});
+
+step_twoItem.addEventListener("click", function () {
+  if (
+    !!contactPageAllFormValues?.ChooseTheBestDescriptionOfYourIssue &&
+    !!contactPageAllFormValues?.addAdditionalDetailsIfYouLikeOrNot
+  ) {
+    removeAllActiveClass();
+    step_two[0].classList.add("active");
+  }
+});
+
+step_threeItem.addEventListener("click", function () {
+  if (
+    !!contactPageAllFormValues?.email &&
+    !!contactPageAllFormValues?.firstName &&
+    !!contactPageAllFormValues?.lastName
+  ) {
+    removeAllActiveClass();
+    step_three[0].classList.add("active");
+  }
+});
+
+// step_fourItem.addEventListener("click", function () {
+//   if (!!contactPageAllFormValues?.StartByDescribingYourIssue) {
+//     removeAllActiveClass();
+//     step_four[0].classList.add("active");
+//   }
+// });
