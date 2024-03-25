@@ -1,0 +1,14 @@
+@media only screen and (max-width: 767px){
+    .mahadidev7_header, .topHeader_Group{
+        display: none;
+    }
+    .mahadidev7_header_mobile{
+        display: block;
+    }
+    .logo{
+        width: 130px;
+    }
+    .mahadidev7_header_content{
+        padding: 5px;
+    }
+}

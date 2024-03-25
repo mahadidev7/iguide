@@ -9,6 +9,9 @@ let step_four = document.querySelectorAll(".step_four");
 let step2a = document.querySelectorAll(".step2a");
 let step2b = document.querySelectorAll(".step2b");
 
+let mobileMenu = document.querySelectorAll(".mobileMenu")[0];
+let closeMenu = document.querySelectorAll(".closeMenu");
+
 // hare is contact page all value
 let contactPageAllFormValues = {
   StartByDescribingYourIssue: "", //Start by describing your issue
@@ -81,4 +84,13 @@ function stepThreeHandler() {
   contactPageAllFormValues["lastName"] = lastName;
   removeAllActiveClass();
   step_four[0].classList.add("active");
+}
+
+// menu open handler 
+function openMenuHandler() {
+    mobileMenu.style.display = "block";
+}
+// menu close handler 
+function closeMenuHandler() {
+    mobileMenu.style.display = "none";
 }
