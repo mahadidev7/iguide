@@ -9,6 +9,7 @@
 
 a {
   text-decoration: none;
+  color: #1558d6;
 }
 
 ul li {
@@ -64,11 +65,13 @@ i {
 }
 
 .mahadidev7_header_Group {
+  height: 65px;
+}
+.containerMD{
   width: 1450px;
   max-width: 100%;
   margin: auto;
   display: block;
-  height: 65px;
 }
 
 .mahadidev7_header_content {
@@ -326,6 +329,39 @@ i {
 }
 
 
+/* footerGroup  */
+footer{
+  padding: 70px 0;
+  background: #7EC6DD;
+  margin-top: 90px;
+}
+
+.footerGroup{
+  width: 600px;
+  max-width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 5px;
+}
+
+.footerGroup p{
+  font-size: 14px;
+  text-align: center;
+  color: #666;
+}
+.footerGroup a:hover{
+  text-decoration: underline;
+}
+.footerGroup .cookies_info{
+  margin-top: 20px;
+}
+.footerGroup .BBB_Aplus{
+  width: 200px;
+  max-width: 100%;
+  margin: auto;
+}
 
 
 
