@@ -1,0 +1,268 @@
+* {
+  box-sizing: border-box;
+  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  /* font-family: "Noto Sans", sans-serif; */
+}
+
+a {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+i {
+  color: #1558d6;
+}
+
+.topHeader {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.topHeader_Group {
+  background: #1558d6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+.topHeader_Group p {
+  color: #fff;
+  font-size: 14px;
+}
+
+.circlegirlIMG {
+  width: 150px;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+.text-center {
+  text-align: center;
+}
+
+.mahadidev7_header {
+  background: #fff;
+  padding: 5px;
+  display: block;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.mahadidev7_header_Group {
+  width: 1450px;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  height: 65px;
+}
+
+.mahadidev7_header_content {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.mahadidev7_header_content .menu {
+  width: auto;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.mahadidev7_header_content .menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mahadidev7_header_content .menu ul li {
+  margin: 0 10px;
+}
+
+.mahadidev7_header_content .menu ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  color: #1558d6;
+  gap: 5px;
+  font-weight: medium;
+  font-size: 16px;
+  transition: all 1s;
+}
+
+.mahadidev7_header_content .menu ul li a:hover {
+  text-decoration: underline;
+}
+
+.mahadidev7_header_content .menu ul li a svg {
+  fill: #1558d6;
+}
+
+.logo {
+  width: 170px;
+}
+
+/* input style start */
+.input_group {
+  position: relative;
+  margin: 20px auto;
+  width: 450px;
+  max-width: 100%;
+}
+.input_group label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: transparent;
+  padding: 0 5px;
+  pointer-events: none;
+  color: #333;
+  background: #fff;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+
+  top: 0;
+  font-size: 14px !important;
+  color: #1558d6;
+}
+
+.input_group .input {
+  padding: 18px;
+  border: 2px solid #ddd;
+  outline: none;
+  width: 100%;
+  max-width: 100% !important;
+  margin: 5px auto;
+  display: block;
+  font-size: 16px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.input_group .input:focus ~ label,
+.input_group .input:valid ~ label {
+  top: 0;
+  font-size: 14px !important;
+  color: #1558d6;
+}
+
+/* input style end */
+
+/* according stye start  */
+.mahadidev7_container {
+  width: 900px;
+  max-width: 100%;
+  /* border: 1px solid #ddd; */
+  display: block;
+  margin:20px auto;
+  padding: 5px;
+}
+
+.mahadidev7_accordingItem {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  /* cursor: pointer; */
+}
+
+.mahadidev7_accordingHeader {
+  padding: 15px;
+  background: #eee;
+  /* border-radius: 5px; */
+}
+
+.mahadidev7_accordingContext {
+  height: 0px !important;
+  overflow: hidden;
+}
+
+.mahadidev7_accordingContext.active{
+  padding: 15px;
+  margin: 20px 0;
+  height: unset !important;;
+}
+
+/* according stye end  */
+
+.btn{
+    padding: 9px 18px;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    margin: auto;
+    display: block;
+    background: #1558d6;
+    color: #fff;
+    cursor: pointer;
+}
+.btn i {
+    color: #fff !important;
+}
+.step2a_UL{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 20px 0
+}
+.step2a_UL button {
+    padding: 7px 18px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 1px solid #ff997f ;
+    background: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+.step2a_UL button:hover{
+    background: #ff997f4b;
+}
+.subTitle{
+    font-size: 22px;
+    font-weight: 600;
+}
+.mahadidev7_flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-direction: column;
+}
+.Success{
+    font-size: 80px !important;
+    color: green;
+}
+
+.step2b{
+  display: none;
+}

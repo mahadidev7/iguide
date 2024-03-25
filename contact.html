@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="./css/mahadidev7.css" />
+</head>
+
+<body>
+    <div class="topHeader">
+        <div class="topHeader_Group">
+            <div class="left">
+                <p>
+                    Silver $24.65 Gold $2162.00 Platinum $892.00 Palladium $973.00
+                    Copper $0.25
+                </p>
+            </div>
+            <div class="right">
+                <p>
+                    System is online. The official time is 3/24/2024 6:52:10 PM Current
+                    Active Users: 355. →
+                </p>
+            </div>
+        </div>
+
+        <header class="mahadidev7_header">
+            <div class="mahadidev7_header_Group">
+                <div class="mahadidev7_header_content">
+                    <a href="https://www.iguide.net/">
+                        <img src="./img/logo_tiny.png" class="logo" />
+                    </a>
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="https://www.iguide.net/">
+                                    <i class="fa-solid fa-house"></i>
+                                    Home</a>
+                            </li>
+                            <li>
+                                <a href="https://www.iguide.net/tip-jar/">
+                                    <i class="fa-solid fa-heart-circle-plus"></i>
+                                    tip jap
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.iguide.net/about/">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    about
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.iguide.net/learn-about/">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    learn
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.iguide.net/price-guide/search.aspx">
+                                    <svg id="Icons" style="width: 18px; float: left" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path class="cls-1"
+                                            d="M22.41,22.41a1.974,1.974,0,0,1-2.82,0l-3.35-3.35a11.116,11.116,0,0,0,2.82-2.82l3.35,3.35A1.974,1.974,0,0,1,22.41,22.41Z">
+                                        </path>
+                                        <path class="cls-1"
+                                            d="M10,1a9,9,0,1,0,9,9A9,9,0,0,0,10,1Zm0,5a4,4,0,0,0-4,4,1,1,0,0,1-2,0,6.006,6.006,0,0,1,6-6,1,1,0,0,1,0,2Z">
+                                        </path>
+                                    </svg>
+                                    appraise
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <header class="mahadidev7_header_mobile"></header>
+    </div>
+
+    <div class="mahadidev7_container">
+        <div class="img">
+            <img src="https://www.iguide.net/contact/circlegirl.jpg" alt="support-img" class="circlegirlIMG" />
+        </div>
+        <div class="mahadidev7_accordingGroup">
+            <div class="mahadidev7_accordingItem">
+                <div class="mahadidev7_accordingHeader">
+                    <h4>Step 1</h4>
+                </div>
+                <div class="mahadidev7_accordingContext step_one active">
+                    <h3 class="text-center subTitle">Start by describing your issue</h3>
+                    <div class="inputBox">
+                        <form onsubmit="event.preventDefault(); return stepOneHandler()" name="stepOneForm">
+                            <div class="input_group">
+                                <input type="text" required class="input StartByDescribingYourIssue" name="message"
+                                    placeholder="watermark Example: Do you appraise <something>?" />
+                                <label for="">Message</label>
+                            </div>
+                            <button type="submit" class="btn">Next <i class="fa-solid fa-arrow-right"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="mahadidev7_accordingItem">
+                <div class="mahadidev7_accordingHeader">
+                    <h4>Step 2</h4>
+                </div>
+                <div class="mahadidev7_accordingContext step_two">
+                    <div class="step2a">
+                        <h3 class="text-center subTitle">Choose the best description of your issue</h3>
+
+                        <div class="step2a_UL">
+                            <button type="button" class="step2a_btn" onclick="step2aHandler('How it works?')">How it
+                                works?</button>
+                            <button type="button" class="step2a_btn" onclick="step2aHandler('Sign Up')">Sign Up</button>
+                            <button type="button" class="step2a_btn" onclick="step2aHandler('Refunds')">Refunds</button>
+                            <button type="button" class="step2a_btn" onclick="step2aHandler('Other')">Other</button>
+                        </div>
+                    </div>
+                    <div class="step2b">
+                        <h3 class="text-center subTitle">Add additional details if you like ... or not.</h3>
+                        <div class="inputBox">
+                            <form name="step2bForm" onsubmit="event.preventDefault(); return step2bHandler()">
+                                <div class="input_group">
+                                    <input type="text" required class="input" name="message"
+                                        placeholder="The original input from Step 1 is persisted here" />
+                                    <label for="">Message</label>
+                                </div>
+                                <button type="submit" class="btn">Next <i class="fa-solid fa-arrow-right"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mahadidev7_accordingItem">
+                <div class="mahadidev7_accordingHeader">
+                    <h4>Step 3</h4>
+                </div>
+                <div class="mahadidev7_accordingContext step_three">
+                    <h3 class="text-center subTitle">Your Contact Details</h3>
+                    <form name="stepThreeForm" onsubmit="event.preventDefault(); return stepThreeHandler()">
+                        <div class="input_group">
+                            <input type="email" name="email" required class="input" placeholder="watermark: Email" />
+                            <input type="text" name="firstName" required class="input"
+                                placeholder="watermark: First Name" />
+                            <input type="text" name="lastName" required class="input"
+                                placeholder="watermark: Last Name" />
+                        </div>
+                        <button type="submit" class="btn">FINISH <i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="mahadidev7_accordingItem">
+                <div class="mahadidev7_accordingHeader">
+                    <h4>Step 4</h4>
+                </div>
+                <div class="mahadidev7_accordingContext step_four">
+                    <div class="mahadidev7_flex">
+                        <i class="fa-solid fa-circle-check Success"></i>
+                        <h3 class="text-center subTitle">Success! What would you like to do next?</h3>
+                        <a href="https://www.iguide.net/" class="btn">Go to Homepage</a>
+                        <a href="https://www.iguide.net/" class="btn">Go to Homepage</a>
+                        <a href="https://www.iguide.net/" class="btn">Go to Homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/fd920727c9.js" crossorigin="anonymous"></script>
+    <script src="./js/mahadidev7.js"></script>
+</body>
+
+</html>
