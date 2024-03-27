@@ -17,6 +17,8 @@ let step_twoItem = document.querySelectorAll(".step_twoItem")[0];
 let step_threeItem = document.querySelectorAll(".step_threeItem")[0];
 let step_fourItem = document.querySelectorAll(".step_fourItem")[0];
 
+let ActiveSubmit = document.querySelectorAll(".ActiveSubmit")[0];
+let inactiveSubmit = document.querySelectorAll(".inactiveSubmit")[0];
 
 // hare is contact page all value
 let contactPageAllFormValues = {
@@ -41,18 +43,18 @@ function removeAllValueInnerText() {
 
   for (let key in resultQuestion) {
     const value = resultQuestion[key];
-    value.innerText = ""
+    value.innerText = "";
   }
   for (let key in resultAnswer) {
     const value = resultAnswer[key];
-    value.innerText = ""
+    value.innerText = "";
   }
   for (let key in editGroup) {
     const value = editGroup[key];
-    value.innerText = ""
+    value.innerText = "";
   }
 
-  contactPageAllFormValues = {}
+  contactPageAllFormValues = {};
 }
 
 // step 1 form handler
@@ -63,13 +65,17 @@ function stepOneHandler() {
   removeAllActiveClass();
   step_two[0].classList.add("active");
 
-  document.querySelectorAll(".step_oneHead .resultQuestion")[0].innerText =
-    "Start by describing your issue";
-  document.querySelectorAll(".step_oneHead .resultAnswer")[0].innerText = value;
+//   document.querySelectorAll(".step_oneHead .resultQuestion")[0].innerText =
+//     "Start by describing your issue";
+//   document.querySelectorAll(".step_oneHead .resultAnswer")[0].innerText = value;
 
-  document.querySelectorAll(".editGroup")[0].innerHTML = `<div class="edit">
-  <i class="fa-solid fa-pen-to-square"></i>
-</div>`;
+//   document.querySelectorAll(".editGroup")[0].innerHTML = `<div class="edit">
+//   <i class="fa-solid fa-pen-to-square"></i>
+// </div>`;
+
+document.querySelectorAll(".step_oneHead")[0].style.display = "flex"
+document.querySelectorAll(".step_twoHead")[0].style.display = "none"
+  
 }
 
 // step 2 form handler
@@ -79,9 +85,9 @@ function step2aHandler(data) {
   step2a[0].style.display = "none";
   step2b[0].style.display = "block";
 
-  document.querySelectorAll(".step_twoHead .resultQuestion")[0].innerText =
-    "Choose the best description of your issue";
-  document.querySelectorAll(".step_twoHead .resultAnswer")[0].innerText = data;
+  // document.querySelectorAll(".step_twoHead .resultQuestion")[0].innerText =
+  //   "Choose the best description of your issue";
+  // document.querySelectorAll(".step_twoHead .resultAnswer")[0].innerText = data;
 }
 // 2b
 function step2bHandler() {
@@ -94,16 +100,20 @@ function step2bHandler() {
   step2a[0].style.display = "block";
   step2b[0].style.display = "none";
 
-  document.querySelectorAll(".step_twoHead .resultQuestion")[0].innerText =
-    "Choose the best description of your issue, Add additional details if you like ... or not.";
-  document.querySelectorAll(".step_twoHead .resultAnswer")[0].innerText =
-    document.querySelectorAll(".step_twoHead .resultAnswer")[0].textContent +
-    "," +
-    value;
+//   document.querySelectorAll(".step_twoHead .resultQuestion")[0].innerText =
+//     "Choose the best description of your issue, Add additional details if you like ... or not.";
+//   document.querySelectorAll(".step_twoHead .resultAnswer")[0].innerText =
+//     document.querySelectorAll(".step_twoHead .resultAnswer")[0].textContent +
+//     "," +
+//     value;
 
-  document.querySelectorAll(".editGroup")[1].innerHTML = `<div class="edit">
-  <i class="fa-solid fa-pen-to-square"></i>
-</div>`;
+//   document.querySelectorAll(".editGroup")[1].innerHTML = `<div class="edit">
+//   <i class="fa-solid fa-pen-to-square"></i>
+// </div>`;
+
+document.querySelectorAll(".step_twoHead")[0].style.display = "flex"
+document.querySelectorAll(".step_ThreeHead")[0].style.display = "none"
+
 }
 
 // step 3 form handler
@@ -118,19 +128,26 @@ function stepThreeHandler() {
   removeAllActiveClass();
   step_four[0].classList.add("active");
 
-  document.querySelectorAll(".step_ThreeHead .resultQuestion")[0].innerText =
-    "Your Contact Details";
-  document.querySelectorAll(".step_ThreeHead .resultAnswer")[0].innerText =
-    email + "," + firstName + "," + lastName;
+//   document.querySelectorAll(".step_ThreeHead .resultQuestion")[0].innerText =
+//     "Your Contact Details";
+//   document.querySelectorAll(".step_ThreeHead .resultAnswer")[0].innerText =
+//     email + "," + firstName + "," + lastName;
 
-  document.querySelectorAll(".step_fourHead .resultQuestion")[0].innerText =
-    "Success";
+//   document.querySelectorAll(".step_fourHead .resultQuestion")[0].innerText =
+//     "Success";
 
-  document.querySelectorAll(".editGroup")[2].innerHTML = `<div class="edit">
-  <i class="fa-solid fa-pen-to-square"></i>
-</div>`;
+//   document.querySelectorAll(".editGroup")[2].innerHTML = `<div class="edit">
+//   <i class="fa-solid fa-pen-to-square"></i>
+// </div>`;
 
-  removeAllValueInnerText();
+document.querySelectorAll(".step_ThreeHead")[0].style.display = "flex"
+document.querySelectorAll(".step_fourHead")[0].style.display = "none"
+
+  // removeAllValueInnerText();
+
+  console.log('==contactPageAllFormValues==================================');
+  console.log(contactPageAllFormValues);
+  console.log('====================================');
 }
 
 // menu open handler
@@ -142,33 +159,39 @@ function closeMenuHandler() {
   mobileMenu.style.display = "none";
 }
 
-step_oneItem.addEventListener("click", function () {
-  if (!!contactPageAllFormValues?.StartByDescribingYourIssue) {
-    removeAllActiveClass();
-    step_one[0].classList.add("active");
-  }
-});
+window.addEventListener("load", function(){
+  inactiveSubmit.style.display = "none"
+  ActiveSubmit.style.display = "block"
+})
 
-step_twoItem.addEventListener("click", function () {
-  if (
-    !!contactPageAllFormValues?.ChooseTheBestDescriptionOfYourIssue &&
-    !!contactPageAllFormValues?.addAdditionalDetailsIfYouLikeOrNot
-  ) {
-    removeAllActiveClass();
-    step_two[0].classList.add("active");
-  }
-});
 
-step_threeItem.addEventListener("click", function () {
-  if (
-    !!contactPageAllFormValues?.email &&
-    !!contactPageAllFormValues?.firstName &&
-    !!contactPageAllFormValues?.lastName
-  ) {
-    removeAllActiveClass();
-    step_three[0].classList.add("active");
-  }
-});
+// step_oneItem.addEventListener("click", function () {
+//   if (!!contactPageAllFormValues?.StartByDescribingYourIssue) {
+//     removeAllActiveClass();
+//     step_one[0].classList.add("active");
+//   }
+// });
+
+// step_twoItem.addEventListener("click", function () {
+//   if (
+//     !!contactPageAllFormValues?.ChooseTheBestDescriptionOfYourIssue &&
+//     !!contactPageAllFormValues?.addAdditionalDetailsIfYouLikeOrNot
+//   ) {
+//     removeAllActiveClass();
+//     step_two[0].classList.add("active");
+//   }
+// });
+
+// step_threeItem.addEventListener("click", function () {
+//   if (
+//     !!contactPageAllFormValues?.email &&
+//     !!contactPageAllFormValues?.firstName &&
+//     !!contactPageAllFormValues?.lastName
+//   ) {
+//     removeAllActiveClass();
+//     step_three[0].classList.add("active");
+//   }
+// });
 
 // step_fourItem.addEventListener("click", function () {
 //   if (!!contactPageAllFormValues?.StartByDescribingYourIssue) {

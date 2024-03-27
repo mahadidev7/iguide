@@ -152,32 +152,37 @@
                 </div>
                 <div class="mahadidev7_accordingGroup">
                     <div class="mahadidev7_accordingItem step_oneItem">
-                        <div class="mahadidev7_accordingHeader step_oneHead">
-                            <h4>Step 1</h4>
-                            <div class="result">
-                                <p class="resultQuestion"></p>
-                                <p class="resultAnswer"></p>
-                            </div>
-                            <div class="editGroup">
-                                <!-- <div class="edit">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </div> -->
-                            </div>
 
+                        <div class="acHeader">
+                            <div class="mahadidev7_accordingHeader step_oneHead">
+                                <h4>Step 1</h4>
+                                <div class="result">
+                                    <p class="resultQuestion"></p>
+                                    <p class="resultAnswer"></p>
+                                </div>
+                            </div>
                         </div>
                         <div class="mahadidev7_accordingContext step_one active">
+                            <p class="stepName">Step 1</p>
                             <h3 class="text-center subTitle">
                                 Start by describing your issue
                             </h3>
                             <div class="inputBox">
                                 <form onsubmit="event.preventDefault(); return stepOneHandler()" name="stepOneForm">
                                     <div class="input_group">
-                                        <input type="text" required class="input StartByDescribingYourIssue"
+                                        <textarea required name="message" class="input StartByDescribingYourIssue"
+                                            placeholder="watermark Example: Do you appraise <something>?"></textarea>
+                                        <!-- <input type="text" required class="input StartByDescribingYourIssue"
                                             name="message"
-                                            placeholder="watermark Example: Do you appraise <something>?" />
+                                            placeholder="watermark Example: Do you appraise <something>?" /> -->
                                         <label for="">Message</label>
                                     </div>
-                                    <button type="submit" class="btn">
+                                    <!-- inactive button -->
+                                    <button type="button" class="inactiveSubmit">
+                                        Next
+                                    </button>
+                                    <!-- Active button -->
+                                    <button type="submit" class="btn_outline ActiveSubmit">
                                         Next <i class="fa-solid fa-arrow-right"></i>
                                     </button>
                                 </form>
@@ -185,20 +190,19 @@
                         </div>
                     </div>
                     <div class="mahadidev7_accordingItem step_twoItem">
-                        <div class="mahadidev7_accordingHeader step_twoHead">
-                            <h4>Step 2</h4>
-                            <div class="result">
-                                <p class="resultQuestion"></p>
-                                <p class="resultAnswer"></p>
-                            </div>
-                            <div class="editGroup">
-                                <!-- <div class="edit">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </div> -->
+                        <div class="acHeader">
+                            <div class="mahadidev7_accordingHeader step_twoHead">
+                                <h4>Step 2</h4>
+                                <div class="result">
+                                    <p class="resultQuestion"></p>
+                                    <p class="resultAnswer"></p>
+                                </div>
                             </div>
                         </div>
+
                         <div class="mahadidev7_accordingContext step_two">
                             <div class="step2a">
+                                <p class="stepName">Step 2</p>
                                 <h3 class="text-center subTitle">
                                     Choose the best description of your issue
                                 </h3>
@@ -219,17 +223,20 @@
                                 </div>
                             </div>
                             <div class="step2b">
+                                <p class="stepName">Step 2b</p>
                                 <h3 class="text-center subTitle">
                                     Add additional details if you like ... or not.
                                 </h3>
                                 <div class="inputBox">
                                     <form name="step2bForm" onsubmit="event.preventDefault(); return step2bHandler()">
                                         <div class="input_group">
-                                            <input type="text" required class="input" name="message"
-                                                placeholder="The original input from Step 1 is persisted here" />
+                                            <textarea required class="input" name="message"
+                                                placeholder="The original input from Step 1 is persisted here"></textarea>
+                                            <!-- <input type="text" required class="input" name="message"
+                                                placeholder="The original input from Step 1 is persisted here" /> -->
                                             <label for="">Message</label>
                                         </div>
-                                        <button type="submit" class="btn">
+                                        <button type="submit" class="btn_outline">
                                             Next <i class="fa-solid fa-arrow-right"></i>
                                         </button>
                                     </form>
@@ -238,21 +245,19 @@
                         </div>
                     </div>
                     <div class="mahadidev7_accordingItem step_threeItem">
-                        <div class="mahadidev7_accordingHeader step_ThreeHead">
-                            <h4>Step 3</h4>
 
-                            <div class="result">
-                                <p class="resultQuestion"></p>
-                                <p class="resultAnswer"></p>
-                            </div>
+                        <div class="acHeader">
+                            <div class="mahadidev7_accordingHeader step_ThreeHead">
+                                <h4>Step 3</h4>
 
-                            <div class="editGroup">
-                                <!-- <div class="edit">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </div> -->
+                                <div class="result">
+                                    <p class="resultQuestion"></p>
+                                    <p class="resultAnswer"></p>
+                                </div>
                             </div>
                         </div>
                         <div class="mahadidev7_accordingContext step_three">
+                            <p class="stepName">Step 3</p>
                             <h3 class="text-center subTitle">Your Contact Details</h3>
                             <form name="stepThreeForm" onsubmit="event.preventDefault(); return stepThreeHandler()">
                                 <div class="input_group">
@@ -263,35 +268,34 @@
                                     <input type="text" name="lastName" required class="input"
                                         placeholder="watermark: Last Name" />
                                 </div>
-                                <button type="submit" class="btn">
+                                <button type="submit" class="btn_outline">
                                     FINISH <i class="fa-solid fa-arrow-right"></i>
                                 </button>
                             </form>
                         </div>
                     </div>
                     <div class="mahadidev7_accordingItem step_fourItem">
-                        <div class="mahadidev7_accordingHeader step_fourHead">
-                            <h4>Step 4</h4>
-                            <div class="result">
-                                <p class="resultQuestion"></p>
-                                <p class="resultAnswer"></p>
-                            </div>
-
-                            <div class="editGroup">
-                                <!-- <div class="edit">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </div> -->
+                        <div class="acHeadeR">
+                            <div class="mahadidev7_accordingHeader step_fourHead">
+                                <h4>Step 4</h4>
+                                <div class="result">
+                                    <p class="resultQuestion"></p>
+                                    <p class="resultAnswer"></p>
+                                </div>
                             </div>
                         </div>
+
                         <div class="mahadidev7_accordingContext step_four">
                             <div class="mahadidev7_flex">
                                 <i class="fa-solid fa-circle-check Success"></i>
                                 <h3 class="text-center subTitle">
                                     Success! What would you like to do next?
                                 </h3>
-                                <a href="https://www.iguide.net/" class="btn">Go to Homepage</a>
-                                <a href="https://www.iguide.net/" class="btn">Go to Homepage</a>
-                                <a href="https://www.iguide.net/" class="btn">Go to Homepage</a>
+                                <div class="fLinkGroup">
+                                    <a href="https://www.iguide.net/" class="btn_outline">Go to Homepage</a>
+                                    <a href="https://www.iguide.net/" class="btn_outline">Go to Homepage</a>
+                                    <a href="https://www.iguide.net/" class="btn_outline">Go to Homepage</a>
+                                </div>
                             </div>
                         </div>
                     </div>
