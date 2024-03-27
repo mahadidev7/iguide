@@ -170,12 +170,14 @@
                             <div class="inputBox">
                                 <form onsubmit="event.preventDefault(); return stepOneHandler()" name="stepOneForm">
                                     <div class="input_group">
-                                        <textarea required name="message" class="input StartByDescribingYourIssue"
-                                            placeholder="watermark Example: Do you appraise <something>?"></textarea>
+                                        <textarea id="s1" name="message" class="input StartByDescribingYourIssue"></textarea>
                                         <!-- <input type="text" required class="input StartByDescribingYourIssue"
                                             name="message"
                                             placeholder="watermark Example: Do you appraise <something>?" /> -->
-                                        <label for="">Message</label>
+                                        <label for="s1">Message</label>
+                                        <div class="errorMessage_StartByDescribingYourIssue">
+
+                                        </div>
                                     </div>
                                     <!-- inactive button -->
                                     <button type="button" class="inactiveSubmit">
@@ -230,11 +232,13 @@
                                 <div class="inputBox">
                                     <form name="step2bForm" onsubmit="event.preventDefault(); return step2bHandler()">
                                         <div class="input_group">
-                                            <textarea required class="input" name="message"
-                                                placeholder="The original input from Step 1 is persisted here"></textarea>
+                                            <textarea id="s2" class="input" name="message"></textarea>
                                             <!-- <input type="text" required class="input" name="message"
                                                 placeholder="The original input from Step 1 is persisted here" /> -->
-                                            <label for="">Message</label>
+                                            <label for="s2">Message</label>
+                                            <div class="errorMessage_addAdditionalDetailsIfYouLikeOrNot">
+
+                                            </div>
                                         </div>
                                         <button type="submit" class="btn_outline">
                                             Next <i class="fa-solid fa-arrow-right"></i>
@@ -261,12 +265,25 @@
                             <h3 class="text-center subTitle">Your Contact Details</h3>
                             <form name="stepThreeForm" onsubmit="event.preventDefault(); return stepThreeHandler()">
                                 <div class="input_group">
-                                    <input type="email" name="email" required class="input"
-                                        placeholder="watermark: Email" />
-                                    <input type="text" name="firstName" required class="input"
-                                        placeholder="watermark: First Name" />
-                                    <input type="text" name="lastName" required class="input"
-                                        placeholder="watermark: Last Name" />
+                                    <input type="email" name="email" name="sEmail" class="input" />
+                                        <label for="sEmail">Email</label>
+                                        <div class="errorMessage_email">
+
+                                        </div>
+                                </div>
+                                <div class="input_group">
+                                    <input type="text" name="firstName" class="input" id="sFirstName" />
+                                        <label for="sFirstName">First Name</label>
+                                        <div class="errorMessage_firstName">
+
+                                        </div>
+                                </div>
+                                <div class="input_group">
+                                    <input type="text" name="lastName" class="input" id="sLastName"/>
+                                        <label for="sLastName">Last Name</label>
+                                        <div class="errorMessage_lastName">
+
+                                        </div>
                                 </div>
                                 <button type="submit" class="btn_outline">
                                     FINISH <i class="fa-solid fa-arrow-right"></i>
