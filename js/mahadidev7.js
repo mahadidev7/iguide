@@ -75,6 +75,9 @@ function stepOneHandler() {
 
 document.querySelectorAll(".step_oneHead")[0].style.display = "flex"
 document.querySelectorAll(".step_twoHead")[0].style.display = "none"
+
+document.querySelectorAll(".step_oneItem")[0].style.border = "1px solid #ddd"
+document.querySelectorAll(".step_twoItem")[0].style.border = "2px solid #999"
   
 }
 
@@ -114,6 +117,9 @@ function step2bHandler() {
 document.querySelectorAll(".step_twoHead")[0].style.display = "flex"
 document.querySelectorAll(".step_ThreeHead")[0].style.display = "none"
 
+document.querySelectorAll(".step_twoItem")[0].style.border = "1px solid #ddd"
+document.querySelectorAll(".step_threeItem")[0].style.border = "2px solid #999"
+
 }
 
 // step 3 form handler
@@ -143,11 +149,12 @@ function stepThreeHandler() {
 document.querySelectorAll(".step_ThreeHead")[0].style.display = "flex"
 document.querySelectorAll(".step_fourHead")[0].style.display = "none"
 
+
+document.querySelectorAll(".step_threeItem")[0].style.border = "1px solid #ddd"
+document.querySelectorAll(".step_fourItem")[0].style.border = "2px solid #999"
+
   // removeAllValueInnerText();
 
-  console.log('==contactPageAllFormValues==================================');
-  console.log(contactPageAllFormValues);
-  console.log('====================================');
 }
 
 // menu open handler

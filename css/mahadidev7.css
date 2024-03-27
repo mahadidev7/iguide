@@ -194,7 +194,7 @@ i {
 
 .mahadidev7_accordingItem {
   background: #fff;
-  border: 1px solid #999;
+  border: 1px solid #cecece;
   margin-top: 10px;
   height: 100%;
   border-radius: 10px;
@@ -203,6 +203,9 @@ i {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   overflow: hidden;
+}
+.step_oneItem{
+  border: 2px solid #999;
 }
 
 
