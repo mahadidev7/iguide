@@ -168,9 +168,11 @@
                                 Start by describing your issue
                             </h3>
                             <div class="inputBox">
-                                <form onsubmit="event.preventDefault(); return stepOneHandler()" name="stepOneForm">
+                                <form onsubmit="event.preventDefault(); return stepOneHandler()" name="stepOneForm"
+                                    autocomplete="off">
                                     <div class="input_group">
-                                        <textarea id="s1" name="message" class="input StartByDescribingYourIssue"></textarea>
+                                        <textarea id="s1" name="message"
+                                            class="input StartByDescribingYourIssue"></textarea>
                                         <!-- <input type="text" required class="input StartByDescribingYourIssue"
                                             name="message"
                                             placeholder="watermark Example: Do you appraise <something>?" /> -->
@@ -230,7 +232,8 @@
                                     Add additional details if you like ... or not.
                                 </h3>
                                 <div class="inputBox">
-                                    <form name="step2bForm" onsubmit="event.preventDefault(); return step2bHandler()">
+                                    <form name="step2bForm" onsubmit="event.preventDefault(); return step2bHandler()"
+                                        autocomplete="off">
                                         <div class="input_group">
                                             <textarea id="s2" class="input" name="message"></textarea>
                                             <!-- <input type="text" required class="input" name="message"
@@ -263,27 +266,30 @@
                         <div class="mahadidev7_accordingContext step_three">
                             <p class="stepName">Step 3</p>
                             <h3 class="text-center subTitle">Your Contact Details</h3>
-                            <form name="stepThreeForm" onsubmit="event.preventDefault(); return stepThreeHandler()">
+                            <form name="stepThreeForm" onsubmit="event.preventDefault(); return stepThreeHandler()"
+                                autocomplete="off">
                                 <div class="input_group">
                                     <input type="email" name="email" name="sEmail" class="input" />
-                                        <label for="sEmail">Email</label>
-                                        <div class="errorMessage_email">
+                                    <label for="sEmail">Email</label>
+                                    <div class="errorMessage_email">
 
-                                        </div>
+                                    </div>
                                 </div>
                                 <div class="input_group">
-                                    <input type="text" name="firstName" class="input" id="sFirstName" />
-                                        <label for="sFirstName">First Name</label>
-                                        <div class="errorMessage_firstName">
+                                    <input type="text" name="firstName" class="input" id="sFirstName"
+                                        autocomplete="nope" />
+                                    <label for="sFirstName">First Name</label>
+                                    <div class="errorMessage_firstName">
 
-                                        </div>
+                                    </div>
                                 </div>
                                 <div class="input_group">
-                                    <input type="text" name="lastName" class="input" id="sLastName"/>
-                                        <label for="sLastName">Last Name</label>
-                                        <div class="errorMessage_lastName">
+                                    <input type="text" name="lastName" class="input" id="sLastName"
+                                        autocomplete="nope" />
+                                    <label for="sLastName">Last Name</label>
+                                    <div class="errorMessage_lastName">
 
-                                        </div>
+                                    </div>
                                 </div>
                                 <button type="submit" class="btn_outline">
                                     FINISH <i class="fa-solid fa-arrow-right"></i>
