@@ -25,6 +25,26 @@ let label = document.querySelectorAll("label");
 let allInput = document.querySelectorAll(".input");
 let arrayOfInput = [...allInput];
 
+
+
+// mobile menu berger code is hare 
+
+// menu open handler
+function openMenuHandler() {
+  mobileMenu.style.display = "block";
+}
+// menu close handler
+function closeMenuHandler() {
+  mobileMenu.style.display = "none";
+}
+
+
+
+
+
+
+// here is according open & close javascript code and form handler functions
+
 // hare is contact page all value
 let contactPageAllFormValues = {
   StartByDescribingYourIssue: "", //Start by describing your issue
@@ -35,11 +55,13 @@ let contactPageAllFormValues = {
   lastName: "", // lastName
 };
 
+// all according item close
 let removeAllActiveClass = () => {
   for (const [key, value] of Object.entries(mahadidev7_accordingContext)) {
     value.classList.remove("active");
   }
 };
+
 
 function removeAllValueInnerText() {
   let resultQuestion = document.querySelectorAll(".resultQuestion");
@@ -87,11 +109,6 @@ function stepOneHandler() {
     document.querySelectorAll(".step_twoItem")[0].style.border =
       "1px solid #1558d6";
 
-    console.log(
-      "==check =contactPageAllFormValues================================="
-    );
-    console.log(contactPageAllFormValues);
-    console.log("====================================");
     return;
   }
 
@@ -232,15 +249,7 @@ function stepThreeHandler() {
   return
 }
 
-// menu open handler
-function openMenuHandler() {
-  mobileMenu.style.display = "block";
-}
-// menu close handler
-function closeMenuHandler() {
-  mobileMenu.style.display = "none";
-}
-
+// next button is stop/inactive function
 window.addEventListener("load", function () {
   inactiveSubmit.style.display = "none";
   ActiveSubmit.style.display = "block";
@@ -286,6 +295,9 @@ window.addEventListener("load", function () {
 
 //   })
 // })
+
+
+// here is text box style of input field
 
 // 1 input box
 allInput[0]?.addEventListener("input", (event) => {
@@ -349,7 +361,8 @@ allInput[3]?.addEventListener("click", function () {
   label[3].style.color = "#049f8d";
   label[3].style.background = "#fff";
 });
-// 3 input box
+
+// 5 input box
 allInput[4]?.addEventListener("input", (event) => {
   contactPageAllFormValues["lastName"] =
     event.target.value;
@@ -365,3 +378,7 @@ allInput[4]?.addEventListener("click", function () {
   label[4].style.background = "#fff";
 });
 
+
+// =================== contact page javascript codes is end =========================
+
+// =================== help page javascript codes is here =========================

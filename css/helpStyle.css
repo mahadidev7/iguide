@@ -1,0 +1,132 @@
+.helpCenterImgGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 950px;
+    max-width: 100%;
+    margin: auto;
+    padding: 5px;
+}
+.searchDivGroup{
+    margin: 20px 0;
+}
+.searchDivGroup .searchTitle{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+.searchForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 650px;
+    max-width: 100%;
+    margin: auto;
+    padding: 5px;
+}
+
+.searchForm .inputGroup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    max-width: 100%;
+    height: 55px;
+    margin: auto;
+    padding: 5px;
+    /* background: #000; */
+}
+.searchForm .inputGroup input{
+    border: 1px solid #1558d6;
+    outline: none !important;
+    padding: 10px !important;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    height: 100%;
+    flex: 1 1 0%;
+    font-size: 16px;
+}
+.searchForm .inputGroup button {
+    width: 90px;
+    height: 100%;
+    font-size: 22px;
+    background: #1558d6;
+    border: none;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.helpAccordionGroup{
+    width: 800px;
+    max-width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+.helpAccordionGroup h3{
+    text-align: center;
+    font-size: 25px;
+    margin: 0 0 25px 0;
+}
+
+.AccordionForHelp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.AccordionForHelp .accordionItem{
+    width: 100%;
+    border-left: 15px solid #808080;
+    background: #F7F7F7;
+    padding: 0 0 0 25px;
+    position: relative;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+.AccordionForHelp .accordionItem .accordionHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
+    /* background: #000; */
+}
+
+.AccordionForHelp .accordionItem .accordionHeader p{
+    font-size: 20px;
+    font-weight: 500;
+}
+.AccordionForHelp .accordionItem .accordionBody{
+    padding: 10px 5px 20px 5px;
+}
+
+.downIcon{
+    width: 25px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
+
+
+
+

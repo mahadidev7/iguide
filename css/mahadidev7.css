@@ -1,9 +1,9 @@
 * {
   box-sizing: border-box;
-  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
   padding: 0;
   margin: 0;
   font-family: "Roboto", sans-serif;
+  outline: none !important;
   /* font-family: "Noto Sans", sans-serif; */
 }
 h1, h2, h3, h4, h5, h6 {
@@ -22,6 +22,24 @@ ul li {
 i {
   color: #1558d6;
 }
+.containerMD {
+  width: 1450px;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.mahadidev7_container {
+  width: 650px;
+  max-width: 100%;
+  /* border: 1px solid #ddd; */
+  display: block;
+  margin: 20px auto;
+  padding: 5px;
+}
+
+
+
 
 .topHeader,
 .mahadidev7_header_mobile {
@@ -71,12 +89,7 @@ i {
 .mahadidev7_header_Group {
   height: 65px;
 }
-.containerMD {
-  width: 1450px;
-  max-width: 100%;
-  margin: auto;
-  display: block;
-}
+
 
 .mahadidev7_header_content {
   display: flex;
@@ -191,14 +204,7 @@ i {
 /* input style end */
 
 /* according stye start  */
-.mahadidev7_container {
-  width: 650px;
-  max-width: 100%;
-  /* border: 1px solid #ddd; */
-  display: block;
-  margin: 20px auto;
-  padding: 5px;
-}
+
 
 .mahadidev7_accordingItem {
   background: #fff;
