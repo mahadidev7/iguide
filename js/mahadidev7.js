@@ -25,9 +25,7 @@ let label = document.querySelectorAll("label");
 let allInput = document.querySelectorAll(".input");
 let arrayOfInput = [...allInput];
 
-
-
-// mobile menu berger code is hare 
+// mobile menu berger code is hare
 
 // menu open handler
 function openMenuHandler() {
@@ -37,11 +35,6 @@ function openMenuHandler() {
 function closeMenuHandler() {
   mobileMenu.style.display = "none";
 }
-
-
-
-
-
 
 // here is according open & close javascript code and form handler functions
 
@@ -61,7 +54,6 @@ let removeAllActiveClass = () => {
     value.classList.remove("active");
   }
 };
-
 
 function removeAllValueInnerText() {
   let resultQuestion = document.querySelectorAll(".resultQuestion");
@@ -178,8 +170,11 @@ function step2bHandler() {
 
 // step 3 form handler
 function stepThreeHandler() {
-
-  if(!!contactPageAllFormValues?.email && !!contactPageAllFormValues?.firstName && !!contactPageAllFormValues?.lastName){
+  if (
+    !!contactPageAllFormValues?.email &&
+    !!contactPageAllFormValues?.firstName &&
+    !!contactPageAllFormValues?.lastName
+  ) {
     const form = document.forms["stepThreeForm"];
     const email = form["email"].value;
     const firstName = form["firstName"].value;
@@ -189,46 +184,45 @@ function stepThreeHandler() {
     contactPageAllFormValues["lastName"] = lastName;
     removeAllActiveClass();
     step_four[0].classList.add("active");
-  
+
     //   document.querySelectorAll(".step_ThreeHead .resultQuestion")[0].innerText =
     //     "Your Contact Details";
     //   document.querySelectorAll(".step_ThreeHead .resultAnswer")[0].innerText =
     //     email + "," + firstName + "," + lastName;
-  
+
     //   document.querySelectorAll(".step_fourHead .resultQuestion")[0].innerText =
     //     "Success";
-  
+
     //   document.querySelectorAll(".editGroup")[2].innerHTML = `<div class="edit">
     //   <i class="fa-solid fa-pen-to-square"></i>
     // </div>`;
-  
+
     document.querySelectorAll(".step_ThreeHead")[0].style.display = "flex";
     document.querySelectorAll(".step_fourHead")[0].style.display = "none";
-  
+
     document.querySelectorAll(".step_threeItem")[0].style.border =
       "1px solid #ddd";
     document.querySelectorAll(".step_fourItem")[0].style.border =
       "1px solid #1558d6";
-  
+
     // removeAllValueInnerText();
 
-    console.log('=====contactPageAllFormValues===============================');
+    console.log("=====contactPageAllFormValues===============================");
     console.log(contactPageAllFormValues);
-    console.log('====================================');
-    return
+    console.log("====================================");
+    return;
   }
 
-  if(!(!!contactPageAllFormValues?.email)){
+  if (!!!contactPageAllFormValues?.email) {
     allInput[2].style.border = "1px solid #b00020";
     label[2].style.color = "#b00020";
     label[2].style.top = "25px";
     document.querySelectorAll(
       ".errorMessage_email"
     )[0].innerHTML = `<p class="error">Email is required.</p>`;
-    
   }
 
-  if(!(!!contactPageAllFormValues?.firstName)){
+  if (!!!contactPageAllFormValues?.firstName) {
     allInput[3].style.border = "1px solid #b00020";
     label[3].style.color = "#b00020";
     label[3].style.top = "25px";
@@ -237,7 +231,7 @@ function stepThreeHandler() {
     )[0].innerHTML = `<p class="error">First Name is required.</p>`;
   }
 
-  if(!(!!contactPageAllFormValues?.lastName)){
+  if (!!!contactPageAllFormValues?.lastName) {
     allInput[4].style.border = "1px solid #b00020";
     label[4].style.color = "#b00020";
     label[4].style.top = "25px";
@@ -246,13 +240,17 @@ function stepThreeHandler() {
     )[0].innerHTML = `<p class="error">Last Name is required.</p>`;
   }
 
-  return
+  return;
 }
 
 // next button is stop/inactive function
 window.addEventListener("load", function () {
-  inactiveSubmit.style.display = "none";
-  ActiveSubmit.style.display = "block";
+  if (inactiveSubmit && ActiveSubmit) {
+    inactiveSubmit.style.display = "none";
+    ActiveSubmit.style.display = "block";
+    return;
+  }
+  return;
 });
 
 // step_oneItem.addEventListener("click", function () {
@@ -296,7 +294,6 @@ window.addEventListener("load", function () {
 //   })
 // })
 
-
 // here is text box style of input field
 
 // 1 input box
@@ -332,12 +329,9 @@ allInput[1]?.addEventListener("click", function () {
 
 // 3 input box
 allInput[2]?.addEventListener("input", (event) => {
-  contactPageAllFormValues["email"] =
-    event.target.value;
+  contactPageAllFormValues["email"] = event.target.value;
   allInput[2].style.border = "1px solid #ddd";
-  document.querySelectorAll(
-    ".errorMessage_email"
-  )[0].innerHTML = ` `;
+  document.querySelectorAll(".errorMessage_email")[0].innerHTML = ` `;
 });
 
 allInput[2]?.addEventListener("click", function () {
@@ -348,12 +342,9 @@ allInput[2]?.addEventListener("click", function () {
 
 // 4 input box
 allInput[3]?.addEventListener("input", (event) => {
-  contactPageAllFormValues["firstName"] =
-    event.target.value;
+  contactPageAllFormValues["firstName"] = event.target.value;
   allInput[3].style.border = "1px solid #ddd";
-  document.querySelectorAll(
-    ".errorMessage_firstName"
-  )[0].innerHTML = ` `;
+  document.querySelectorAll(".errorMessage_firstName")[0].innerHTML = ` `;
 });
 
 allInput[3]?.addEventListener("click", function () {
@@ -364,12 +355,9 @@ allInput[3]?.addEventListener("click", function () {
 
 // 5 input box
 allInput[4]?.addEventListener("input", (event) => {
-  contactPageAllFormValues["lastName"] =
-    event.target.value;
+  contactPageAllFormValues["lastName"] = event.target.value;
   allInput[4].style.border = "1px solid #ddd";
-  document.querySelectorAll(
-    ".errorMessage_lastName"
-  )[0].innerHTML = ` `;
+  document.querySelectorAll(".errorMessage_lastName")[0].innerHTML = ` `;
 });
 
 allInput[4]?.addEventListener("click", function () {
@@ -378,7 +366,45 @@ allInput[4]?.addEventListener("click", function () {
   label[4].style.background = "#fff";
 });
 
-
 // =================== contact page javascript codes is end =========================
-
 // =================== help page javascript codes is here =========================
+
+
+let accordionBodyGroup = document.querySelectorAll(".AccordionForHelp .accordionBodyGroup");
+let accordionItemHelp = document.querySelectorAll(".AccordionForHelp .accordionItem");
+let downIcon = document.querySelectorAll(".AccordionForHelp .accordionItem .downIcon");
+let searchButtonStepOne = document.querySelectorAll(".searchButtonStepOne");
+let stepOneHelp = document.querySelectorAll(".stepOneHelp");
+let stepTwoHelp = document.querySelectorAll(".stepTwoHelp");
+
+// remove all active class of help - the accordion
+function removeActiveAccordionHelp() {
+  for (const [key, value] of Object.entries(accordionBodyGroup)) {
+    value.classList.remove("active");
+  }
+  for (const [key, value] of Object.entries(downIcon)) {
+    value.style.transform = "rotate(0deg)";
+  }
+}
+
+accordionItemHelp[0]?.addEventListener("click", function(){
+  removeActiveAccordionHelp();
+  accordionBodyGroup[0].classList.add("active");
+  downIcon[0].style.transform = "rotate(180deg)";
+})
+accordionItemHelp[1]?.addEventListener("click", function(){
+  removeActiveAccordionHelp();
+  accordionBodyGroup[1].classList.add("active");
+  downIcon[1].style.transform = "rotate(180deg)";
+})
+accordionItemHelp[2]?.addEventListener("click", function(){
+  removeActiveAccordionHelp();
+  accordionBodyGroup[2].classList.add("active");
+  downIcon[2].style.transform = "rotate(180deg)";
+})
+
+searchButtonStepOne[0]?.addEventListener("click", function(){
+  stepOneHelp[0].style.display = "none";
+  stepTwoHelp[0].style.display = "block";
+})
+

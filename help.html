@@ -151,60 +151,111 @@
         <div class="containerMD">
             <div class="helpCenterImgGroup">
                 <img src="https:\\www.iguide.net/help/helpgirl.jpg" alt="helpgirl" class="circlegirlIMG">
-                <p class="text-center">Hey there! Our iGuide.net Help Page is your go-to spot for all your queries.
-                    Packed with frequently asked questions and their answers, it's like a treasure trove of
-                    information, ready to help you navigate through any confusion. Got a question that's not on the
-                    list or facing a unique challenge? We're all ears! Drop us a line and tell us more — we're here
-                    to help every step of the way.</p>
             </div>
-            <div class="searchDivGroup">
-                <h1 class="searchTitle">How can I help you today ?</h1>
-                <form class="searchForm">
-                    <div class="inputGroup">
-                        <input type="text" class="searchInput">
-                        <button type="button" class="searchButton">
-                            GO
-                        </button>
-                    </div>
+            <div class="stepOneHelp">
+                <div class="searchDivGroup">
+                    <p class="text-center">Hey there! Our iGuide.net Help Page is your go-to spot for all your queries.
+                        Packed with frequently asked questions and their answers, it's like a treasure trove of
+                        information, ready to help you navigate through any confusion. Got a question that's not on the
+                        list or facing a unique challenge? We're all ears! Drop us a line and tell us more — we're here
+                        to help every step of the way.</p>
+                    <h1 class="searchTitle">How can I help you today ?</h1>
+                    <form class="searchForm">
+                        <div class="inputGroup">
+                            <input type="text" class="searchInput">
+                            <button type="button" class="searchButtonStepOne">
+                                GO
+                            </button>
+                        </div>
 
-                </form>
+                    </form>
+                </div>
+                <div class="helpAccordionGroup">
+                    <h3>Common Questions</h3>
+                    <div class="AccordionForHelp">
+                        <div class="accordionItem">
+                            <div class="accordionHeader">
+                                <p>How do I get started?</p>
+                                <img src="./img/down-arrows.png" alt="down-arrows" class="downIcon">
+                            </div>
+                            <div class="accordionBodyGroup">
+                                <div class="accordionBody">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates id laudantium,
+                                    vero
+                                    fugit porro fuga explicabo voluptas beatae perspiciatis quod consectetur magnam,
+                                    excepturi quos corrupti praesentium in, odio quasi? Deleniti.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordionItem">
+                            <div class="accordionHeader">
+                                <p>How do I get started?</p>
+                                <img src="./img/down-arrows.png" alt="down-arrows" class="downIcon">
+                            </div>
+                            <div class="accordionBodyGroup">
+                                <div class="accordionBody">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates id laudantium,
+                                    vero
+                                    fugit porro fuga explicabo voluptas beatae perspiciatis quod consectetur magnam,
+                                    excepturi quos corrupti praesentium in, odio quasi? Deleniti.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordionItem">
+                            <div class="accordionHeader">
+                                <p>How do I get started?</p>
+                                <img src="./img/down-arrows.png" alt="down-arrows" class="downIcon">
+                            </div>
+                            <div class="accordionBodyGroup">
+                                <div class="accordionBody">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates id laudantium,
+                                    vero
+                                    fugit porro fuga explicabo voluptas beatae perspiciatis quod consectetur magnam,
+                                    excepturi quos corrupti praesentium in, odio quasi? Deleniti.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="helpAccordionGroup">
-                <h3>Common Questions</h3>
-                <div class="AccordionForHelp">
-                    <div class="accordionItem">
-                        <div class="accordionHeader">
-                            <p>How do I get started?</p>
-                            <img src="./img/down-arrows.png" alt="down-arrows" class="downIcon">
-                        </div>
-                        <div class="accordionBodyGroup">
-                            <!-- <div class="accordionBody">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates id laudantium, vero fugit porro fuga explicabo voluptas beatae perspiciatis quod consectetur magnam, excepturi quos corrupti praesentium in, odio quasi? Deleniti.
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class="accordionItem">
-                        <div class="accordionHeader">
-                            <p>How do I get started?</p>
-                            <img src="./img/down-arrows.png" alt="down-arrows" class="downIcon">
-                        </div>
-                        <div class="accordionBodyGroup">
-                            <div class="accordionBody">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates id laudantium, vero fugit porro fuga explicabo voluptas beatae perspiciatis quod consectetur magnam, excepturi quos corrupti praesentium in, odio quasi? Deleniti.
+            <div class="stepTwoHelp">
+                <div class="sds">
+                    <form name="stepThreeForm" onsubmit="event.preventDefault(); return stepThreeHandler()"
+                        autocomplete="off">
+                        <div class="input_group">
+                            <textarea id="s1" name="message"
+                                class="input StartByDescribingYourIssue"></textarea>
+
+                            <label for="s1">Message</label>
+                            <div class="errorMessage_StartByDescribingYourIssue">
+
                             </div>
                         </div>
-                    </div>
-                    <div class="accordionItem">
-                        <div class="accordionHeader">
-                            <p>How do I get started?</p>
-                            <img src="./img/down-arrows.png" alt="down-arrows" class="downIcon">
-                        </div>
-                        <div class="accordionBodyGroup">
-                            <div class="accordionBody">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates id laudantium, vero fugit porro fuga explicabo voluptas beatae perspiciatis quod consectetur magnam, excepturi quos corrupti praesentium in, odio quasi? Deleniti.
+                        <h3 class="text-center subTitle">Your Contact Details</h3>
+                        <div class="input_group">
+                            <input type="email" name="email" name="sEmail" class="input" />
+                            <label for="sEmail">Email</label>
+                            <div class="errorMessage_email">
                             </div>
                         </div>
-                    </div>
+                        <div class="input_group">
+                            <input type="text" name="firstName" class="input" id="sFirstName" autocomplete="nope" />
+                            <label for="sFirstName">First Name</label>
+                            <div class="errorMessage_firstName">
+
+                            </div>
+                        </div>
+                        <div class="input_group">
+                            <input type="text" name="lastName" class="input" id="sLastName" autocomplete="nope" />
+                            <label for="sLastName">Last Name</label>
+                            <div class="errorMessage_lastName">
+
+                            </div>
+                        </div>
+                        <button type="submit" class="btn_outline">
+                            FINISH <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
                 </div>
             </div>
     </section>

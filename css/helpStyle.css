@@ -10,7 +10,12 @@
     padding: 5px;
 }
 .searchDivGroup{
-    margin: 20px 0;
+    margin: 0px auto;
+    width: 950px;
+    max-width: 100%;
+}
+.searchDivGroup p{
+    margin-bottom: 20px;
 }
 .searchDivGroup .searchTitle{
     font-size: 2rem;
@@ -124,9 +129,20 @@
     top: 10px;
     right: 10px;
 }
+.accordionBodyGroup{
+    display: none;
+}
+.accordionBodyGroup.active{
+    display: block;
+}
 
 
-
-
+/* step 2  */
+.stepTwoHelp{
+    /* display: none; */
+}
+.stepOneHelp{
+    display: none;
+}
 
 
