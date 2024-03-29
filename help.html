@@ -219,15 +219,16 @@
                 </div>
             </div>
             <div class="stepTwoHelp">
+                <h1 class="searchTitle">You can add to your question if you like...</h1>
                 <div class="sds">
-                    <form name="stepThreeForm" onsubmit="event.preventDefault(); return stepThreeHandler()"
+                    <form class="helpForm" name="helpForm" onsubmit="event.preventDefault(); return helpFormHandler()"
                         autocomplete="off">
-                        <div class="input_group">
+                        <div class="input_group messageHelp">
                             <textarea id="s1" name="message"
-                                class="input StartByDescribingYourIssue"></textarea>
+                                class="input PleaseDescribeYourRequest"></textarea>
 
-                            <label for="s1">Message</label>
-                            <div class="errorMessage_StartByDescribingYourIssue">
+                            <label for="s1">Please describe your request</label>
+                            <div class="errorMessage_messageHelp">
 
                             </div>
                         </div>
@@ -235,20 +236,20 @@
                         <div class="input_group">
                             <input type="email" name="email" name="sEmail" class="input" />
                             <label for="sEmail">Email</label>
-                            <div class="errorMessage_email">
+                            <div class="errorMessage_emailHelp">
                             </div>
                         </div>
                         <div class="input_group">
                             <input type="text" name="firstName" class="input" id="sFirstName" autocomplete="nope" />
                             <label for="sFirstName">First Name</label>
-                            <div class="errorMessage_firstName">
+                            <div class="errorMessage_firstNameHelp">
 
                             </div>
                         </div>
                         <div class="input_group">
                             <input type="text" name="lastName" class="input" id="sLastName" autocomplete="nope" />
                             <label for="sLastName">Last Name</label>
-                            <div class="errorMessage_lastName">
+                            <div class="errorMessage_lastNameHelp">
 
                             </div>
                         </div>
@@ -258,11 +259,27 @@
                     </form>
                 </div>
             </div>
+            <div class="stepThreeHelp">
+                <h1 class="searchTitle">Thank you. We will respond as quick as we can.</h1>
+                <div class="mahadidev7_accordingContext">
+                    <div class="mahadidev7_flex">
+                        <i class="fa-solid fa-circle-check Success"></i>
+                        <h3 class="text-center subTitle">
+                            Success! What would you like to do next?
+                        </h3>
+                        <div class="fLinkGroup">
+                            <a href="https://www.iguide.net/" class="btn_outline">Go to Homepage</a>
+                            <a href="https://www.iguide.net/" class="btn_outline">Go to Homepage</a>
+                            <a href="https://www.iguide.net/" class="btn_outline">Go to Homepage</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
 
     <script src="https://kit.fontawesome.com/fd920727c9.js" crossorigin="anonymous"></script>
-    <script src="./js/mahadidev7.js"></script>
+    <script src="./js/helpScript.js"></script>
 </body>
 
 </html>

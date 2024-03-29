@@ -367,44 +367,4 @@ allInput[4]?.addEventListener("click", function () {
 });
 
 // =================== contact page javascript codes is end =========================
-// =================== help page javascript codes is here =========================
-
-
-let accordionBodyGroup = document.querySelectorAll(".AccordionForHelp .accordionBodyGroup");
-let accordionItemHelp = document.querySelectorAll(".AccordionForHelp .accordionItem");
-let downIcon = document.querySelectorAll(".AccordionForHelp .accordionItem .downIcon");
-let searchButtonStepOne = document.querySelectorAll(".searchButtonStepOne");
-let stepOneHelp = document.querySelectorAll(".stepOneHelp");
-let stepTwoHelp = document.querySelectorAll(".stepTwoHelp");
-
-// remove all active class of help - the accordion
-function removeActiveAccordionHelp() {
-  for (const [key, value] of Object.entries(accordionBodyGroup)) {
-    value.classList.remove("active");
-  }
-  for (const [key, value] of Object.entries(downIcon)) {
-    value.style.transform = "rotate(0deg)";
-  }
-}
-
-accordionItemHelp[0]?.addEventListener("click", function(){
-  removeActiveAccordionHelp();
-  accordionBodyGroup[0].classList.add("active");
-  downIcon[0].style.transform = "rotate(180deg)";
-})
-accordionItemHelp[1]?.addEventListener("click", function(){
-  removeActiveAccordionHelp();
-  accordionBodyGroup[1].classList.add("active");
-  downIcon[1].style.transform = "rotate(180deg)";
-})
-accordionItemHelp[2]?.addEventListener("click", function(){
-  removeActiveAccordionHelp();
-  accordionBodyGroup[2].classList.add("active");
-  downIcon[2].style.transform = "rotate(180deg)";
-})
-
-searchButtonStepOne[0]?.addEventListener("click", function(){
-  stepOneHelp[0].style.display = "none";
-  stepTwoHelp[0].style.display = "block";
-})
 

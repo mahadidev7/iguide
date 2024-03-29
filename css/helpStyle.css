@@ -17,7 +17,7 @@
 .searchDivGroup p{
     margin-bottom: 20px;
 }
-.searchDivGroup .searchTitle{
+.searchDivGroup .searchTitle, .stepTwoHelp .searchTitle,  .stepThreeHelp .searchTitle{
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
@@ -138,11 +138,68 @@
 
 
 /* step 2  */
-.stepTwoHelp{
-    /* display: none; */
-}
-.stepOneHelp{
+.stepTwoHelp, .stepThreeHelp{
     display: none;
 }
 
+
+.input_group{
+    position: relative;
+}
+.input_group label {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    /*transform: translateY(-50%);
+    */font-size: 16px;
+    color: transparent;
+    padding: 0 5px;
+    pointer-events: none;
+    background: transparent;
+    font-size: 16px;
+    color: #666;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+  }
+
+.stepTwoHelp{
+    padding: 7px;
+}
+.input.PleaseDescribeYourRequest{
+    border: 1px solid #1558d6 ;
+}
+.stepTwoHelp form{
+    border: 1px solid #1558d6;
+    margin: 20px auto;
+    width: 650px;
+    max-width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 15px;
+}
+
+.input_group.messageHelp{
+    width: 580px;
+    max-width: 100%;
+}
+
+.stepThreeHelp .mahadidev7_accordingContext{
+    height: unset !important;
+    border: 1px solid #1558d6;
+    margin: 20px auto;
+    width: 650px;
+    max-width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+}
 
