@@ -207,7 +207,7 @@ i {
 /* according stye start  */
 
 
-.mahadidev7_accordingItem {
+.accordingItem {
   background: #fff;
   border: 1px solid #cecece;
   margin-top: 10px;
@@ -223,7 +223,7 @@ i {
   border: 1px solid #1558d6;
 }
 
-.mahadidev7_accordingHeader {
+.accordingHeadDiv {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -234,12 +234,12 @@ i {
   /* border-radius: 5px; */
 }
 
-.mahadidev7_accordingContext {
+.accordingBodyContent {
   height: 0px !important;
   overflow: hidden;
 }
 
-.mahadidev7_accordingContext.active {
+.accordingBodyContent.active {
   padding: 15px;
   margin: 0 0 20px 0;
   height: unset !important;
@@ -249,7 +249,7 @@ i {
   background: #e7e7e7;
   display: none;
 }
-.mahadidev7_accordingHeader h4 {
+.accordingHeadDiv h4 {
   background: #dbd9d9;
   display: flex;
   justify-content: center;
@@ -277,7 +277,7 @@ i {
   background: #FFB79B;
 } */
 
-/* .mahadidev7_accordingHeader.step_twoHead h4{
+/* .accordingHeadDiv.step_twoHead h4{
   background: #FF6666;
 } */
 
@@ -285,7 +285,7 @@ i {
   background: #B2D8B2;
 } */
 
-/* .mahadidev7_accordingHeader.step_ThreeHead h4{
+/* .accordingHeadDiv.step_ThreeHead h4{
   background: #008000;
 } */
 
@@ -293,7 +293,7 @@ i {
   background: #CADBFE;
 } */
 
-/* .mahadidev7_accordingHeader.step_fourHead h4{
+/* .accordingHeadDiv.step_fourHead h4{
   background: #0000FF;
 } */
 
