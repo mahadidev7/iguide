@@ -151,7 +151,7 @@
                     <img src="https://www.iguide.net/contact/circlegirl.jpg" alt="support-img" class="circlegirlIMG" />
                 </div>
                 <div class="accordingGroup">
-                    <div class="accordingItem step_oneItem active">
+                    <div class="accordingItem step_oneItem active" itemNumber="one">
 
                         <div class="acHeader">
                             <div class="accordingHeadDiv step_oneHead">
@@ -223,11 +223,9 @@
                                     <form name="step2bForm" onsubmit="event.preventDefault(); return step2bHandler()"
                                         autocomplete="off">
                                         <div class="input_group">
-                                            <textarea id="s2" class="input" name="message"></textarea>
-                                            <!-- <input type="text" required class="input" name="message"
-                                                placeholder="The original input from Step 1 is persisted here" /> -->
+                                            <textarea id="s2" class="input" name="addAdditionalDetailsIfYouLikeOrNot" errorMessage="This input box is required"></textarea>
                                             <label for="s2">Message</label>
-                                            <div class="errorMessage_addAdditionalDetailsIfYouLikeOrNot">
+                                            <div class="errorDiv">
 
                                             </div>
                                         </div>

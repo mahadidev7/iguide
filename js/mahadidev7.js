@@ -1,6 +1,8 @@
 let accordingBodyContent = document.getElementsByClassName(
   "accordingBodyContent"
 );
+let accordingItem = document.querySelectorAll(".accordingItem");
+
 let step_one = document.querySelectorAll(".step_one");
 let step_two = document.querySelectorAll(".step_two");
 let step_three = document.querySelectorAll(".step_three");
@@ -51,7 +53,7 @@ let contactPageAllFormValues = {
 
 // all according item close
 let removeAllActiveClass = () => {
-  for (const [key, value] of Object.entries(accordingBodyContent)) {
+  for (const [key, value] of Object.entries(accordingItem)) {
     value.classList.remove("active");
   }
 };
@@ -81,31 +83,23 @@ function removeAllValueInnerText() {
 function stepOneHandler() {
   if (!!contactPageAllFormValues?.StartByDescribingYourIssue) {
     const form = document.forms["stepOneForm"];
-
-    contactPageAllFormValues["StartByDescribingYourIssue"] = form["StartByDescribingYourIssue"].value;
-
+    contactPageAllFormValues["StartByDescribingYourIssue"] =
+      form["StartByDescribingYourIssue"].value;
     removeAllActiveClass();
-    step_two[0].classList.add("active");
-
-
-
-    document.querySelectorAll(".step_oneHead")[0].style.display = "flex";
-    document.querySelectorAll(".step_twoHead")[0].style.display = "none";
-
-    document.querySelectorAll(".step_oneItem")[0].style.border =
-      "1px solid #ddd";
-    document.querySelectorAll(".step_twoItem")[0].style.border =
-      "1px solid #1558d6";
-
+    accordingItem[1].classList.add("active");
     return;
   }
+  let inputTag = accordingItem[0].querySelector(".input");
+  let labelTag = accordingItem[0].querySelector("label");
+  let errorDiv = accordingItem[0].querySelector(".errorDiv");
 
-  allInput[0].style.border = "1px solid #b00020";
-  label[0].style.color = "#b00020";
-  label[0].style.top = "25px";
-  document.querySelectorAll(
-    ".errorMessage_StartByDescribingYourIssue"
-  )[0].innerHTML = `<p class="error">This input box is required.</p>`;
+  inputTag.style.border = "1px solid #b00020";
+  labelTag.style.color = "#b00020";
+  labelTag.style.top = "25px";
+
+  errorDiv.innerHTML = `<p class="error">${inputTag?.getAttribute(
+    "errorMessage"
+  )}</p>`;
   return;
 }
 
@@ -124,42 +118,23 @@ function step2aHandler(data) {
 function step2bHandler() {
   if (!!contactPageAllFormValues?.addAdditionalDetailsIfYouLikeOrNot) {
     const form = document.forms["step2bForm"];
-    const value = form["message"].value;
-    contactPageAllFormValues["addAdditionalDetailsIfYouLikeOrNot"] = value;
+
+    contactPageAllFormValues["addAdditionalDetailsIfYouLikeOrNot"] =
+      form["addAdditionalDetailsIfYouLikeOrNot"].value;
     removeAllActiveClass();
-    step_three[0].classList.add("active");
-
-    step2a[0].style.display = "block";
-    step2b[0].style.display = "none";
-
-    //   document.querySelectorAll(".step_twoHead .resultQuestion")[0].innerText =
-    //     "Choose the best description of your issue, Add additional details if you like ... or not.";
-    //   document.querySelectorAll(".step_twoHead .resultAnswer")[0].innerText =
-    //     document.querySelectorAll(".step_twoHead .resultAnswer")[0].textContent +
-    //     "," +
-    //     value;
-
-    //   document.querySelectorAll(".editGroup")[1].innerHTML = `<div class="edit">
-    //   <i class="fa-solid fa-pen-to-square"></i>
-    // </div>`;
-
-    document.querySelectorAll(".step_twoHead")[0].style.display = "flex";
-    document.querySelectorAll(".step_ThreeHead")[0].style.display = "none";
-
-    document.querySelectorAll(".step_twoItem")[0].style.border =
-      "1px solid #ddd";
-    document.querySelectorAll(".step_threeItem")[0].style.border =
-      "1px solid #1558d6";
-
+    accordingItem[2].classList.add("active");
     return;
   }
+  let inputTag = accordingItem[1].querySelector(".input");
+  let labelTag = accordingItem[1].querySelector("label");
+  let errorDiv = accordingItem[1].querySelector(".errorDiv");
 
-  allInput[1].style.border = "1px solid #b00020";
-  label[1].style.color = "#b00020";
+  inputTag.style.border = "1px solid #b00020";
+  labelTag.style.color = "#b00020";
   label[1].style.top = "25px";
-  document.querySelectorAll(
-    ".errorMessage_addAdditionalDetailsIfYouLikeOrNot"
-  )[0].innerHTML = `<p class="error">This input box is required.</p>`;
+  errorDiv.innerHTML = `<p class="error">${inputTag?.getAttribute(
+    "errorMessage"
+  )}</p>`;
 
   return;
 }
@@ -321,8 +296,6 @@ window.addEventListener("load", function () {
 //   label[4].style.background = "#fff";
 // });
 
-
-
 // input box validation with focus & blur & input value change
 input_groups?.forEach((element) => {
   let InputBox = element.querySelector(".input");
@@ -369,4 +342,3 @@ input_groups?.forEach((element) => {
     }
   });
 });
-

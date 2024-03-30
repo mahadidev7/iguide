@@ -219,7 +219,7 @@ i {
   -o-border-radius: 10px;
   overflow: hidden;
 }
-.step_oneItem {
+.accordingItem.active{
   border: 1px solid #1558d6;
 }
 
@@ -234,21 +234,22 @@ i {
   /* border-radius: 5px; */
 }
 
-.accordingBodyContent {
-  height: 0px !important;
+.accordingItem .accordingBodyContent {
   overflow: hidden;
+  height: 0px;
 }
-
-.accordingBodyContent.active {
+.accordingItem.active .accordingBodyContent {
   padding: 15px;
   margin: 0 0 20px 0;
+  overflow: hidden;
   height: unset !important;
 }
 
-.step_oneHead {
+.accordingItem.active .accordingHeadDiv{
   background: #e7e7e7;
   display: none;
 }
+
 .accordingHeadDiv h4 {
   background: #dbd9d9;
   display: flex;
