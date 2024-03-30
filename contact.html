@@ -250,25 +250,25 @@
                             <form name="stepThreeForm" onsubmit="event.preventDefault(); return stepThreeHandler()"
                                 autocomplete="off">
                                 <div class="input_group">
-                                    <input type="email" name="email" name="sEmail" class="input" />
+                                    <input type="email" name="email" id="sEmail" class="input"  errorMessage="Email is required." />
                                     <label for="sEmail">Email</label>
-                                    <div class="errorMessage_email">
+                                    <div class="errorDiv">
 
                                     </div>
                                 </div>
                                 <div class="input_group">
                                     <input type="text" name="firstName" class="input" id="sFirstName"
-                                        autocomplete="nope" />
+                                        autocomplete="nope"  errorMessage="Fast Name is required."/>
                                     <label for="sFirstName">First Name</label>
-                                    <div class="errorMessage_firstName">
+                                    <div class="errorDiv">
 
                                     </div>
                                 </div>
                                 <div class="input_group">
                                     <input type="text" name="lastName" class="input" id="sLastName"
-                                        autocomplete="nope" />
+                                        autocomplete="nope" errorMessage="Last Name is required." />
                                     <label for="sLastName">Last Name</label>
-                                    <div class="errorMessage_lastName">
+                                    <div class="errorDiv">
 
                                     </div>
                                 </div>

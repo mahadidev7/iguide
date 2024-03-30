@@ -141,75 +141,46 @@ function step2bHandler() {
 
 // step 3 form handler
 function stepThreeHandler() {
+  let formTag = document.forms["stepThreeForm"];
+
   if (
     !!contactPageAllFormValues?.email &&
     !!contactPageAllFormValues?.firstName &&
     !!contactPageAllFormValues?.lastName
   ) {
-    const form = document.forms["stepThreeForm"];
-    const email = form["email"].value;
-    const firstName = form["firstName"].value;
-    const lastName = form["lastName"].value;
-    contactPageAllFormValues["email"] = email;
-    contactPageAllFormValues["firstName"] = firstName;
-    contactPageAllFormValues["lastName"] = lastName;
+    contactPageAllFormValues["email"] = formTag["email"].value;
+    contactPageAllFormValues["firstName"] = formTag["firstName"].value;
+    contactPageAllFormValues["lastName"] = formTag["lastName"].value;
+
     removeAllActiveClass();
-    step_four[0].classList.add("active");
-
-    //   document.querySelectorAll(".step_ThreeHead .resultQuestion")[0].innerText =
-    //     "Your Contact Details";
-    //   document.querySelectorAll(".step_ThreeHead .resultAnswer")[0].innerText =
-    //     email + "," + firstName + "," + lastName;
-
-    //   document.querySelectorAll(".step_fourHead .resultQuestion")[0].innerText =
-    //     "Success";
-
-    //   document.querySelectorAll(".editGroup")[2].innerHTML = `<div class="edit">
-    //   <i class="fa-solid fa-pen-to-square"></i>
-    // </div>`;
-
-    document.querySelectorAll(".step_ThreeHead")[0].style.display = "flex";
-    document.querySelectorAll(".step_fourHead")[0].style.display = "none";
-
-    document.querySelectorAll(".step_threeItem")[0].style.border =
-      "1px solid #ddd";
-    document.querySelectorAll(".step_fourItem")[0].style.border =
-      "1px solid #1558d6";
-
-    // removeAllValueInnerText();
+    accordingItem[3].classList.add("active");
 
     console.log("=====contactPageAllFormValues===============================");
     console.log(contactPageAllFormValues);
-    console.log("====================================");
+    
     return;
   }
 
-  if (!!!contactPageAllFormValues?.email) {
-    allInput[2].style.border = "1px solid #b00020";
-    label[2].style.color = "#b00020";
-    label[2].style.top = "25px";
-    document.querySelectorAll(
-      ".errorMessage_email"
-    )[0].innerHTML = `<p class="error">Email is required.</p>`;
-  }
+  let input_groups = formTag.querySelectorAll(".input_group");
 
-  if (!!!contactPageAllFormValues?.firstName) {
-    allInput[3].style.border = "1px solid #b00020";
-    label[3].style.color = "#b00020";
-    label[3].style.top = "25px";
-    document.querySelectorAll(
-      ".errorMessage_firstName"
-    )[0].innerHTML = `<p class="error">First Name is required.</p>`;
-  }
+  input_groups?.forEach((element, i) => {
+    let InputBox = element.querySelector(".input");
+    let labelTag = element.querySelector("label");
+    let errorDiv = element.querySelector(".errorDiv");
 
-  if (!!!contactPageAllFormValues?.lastName) {
-    allInput[4].style.border = "1px solid #b00020";
-    label[4].style.color = "#b00020";
-    label[4].style.top = "25px";
-    document.querySelectorAll(
-      ".errorMessage_lastName"
-    )[0].innerHTML = `<p class="error">Last Name is required.</p>`;
-  }
+    if (!!InputBox.value) {
+      return;
+    } else {
+      InputBox.style.border = "1px solid #b00020";
+      labelTag.style.color = "#b00020";
+      labelTag.style.top = "25px";
+      errorDiv.innerHTML = `<p class="error">${InputBox?.getAttribute(
+        "errorMessage"
+      )}</p>`;
+    }
+
+    return;
+  });
 
   return;
 }
@@ -223,78 +194,6 @@ window.addEventListener("load", function () {
   }
   return;
 });
-
-// here is text box style of input field
-
-// // 1 input box
-// allInput[0]?.addEventListener("input", (event) => {
-//   contactPageAllFormValues["StartByDescribingYourIssue"] = event.target.value;
-//   allInput[0].style.border = "1px solid #ddd";
-//   document.querySelectorAll(
-//     ".errorMessage_StartByDescribingYourIssue"
-//   )[0].innerHTML = ` `;
-// });
-
-// allInput[0]?.addEventListener("click", function () {
-//   label[0].style.top = "0";
-//   label[0].style.color = "#049f8d";
-//   label[0].style.background = "#fff";
-// });
-
-// // 2 input box
-// allInput[1]?.addEventListener("input", (event) => {
-//   contactPageAllFormValues["addAdditionalDetailsIfYouLikeOrNot"] =
-//     event.target.value;
-//   allInput[1].style.border = "1px solid #ddd";
-//   document.querySelectorAll(
-//     ".errorMessage_addAdditionalDetailsIfYouLikeOrNot"
-//   )[0].innerHTML = ` `;
-// });
-
-// allInput[1]?.addEventListener("click", function () {
-//   label[1].style.top = "0";
-//   label[1].style.color = "#049f8d";
-//   label[1].style.background = "#fff";
-// });
-
-// // 3 input box
-// allInput[2]?.addEventListener("input", (event) => {
-//   contactPageAllFormValues["email"] = event.target.value;
-//   allInput[2].style.border = "1px solid #ddd";
-//   document.querySelectorAll(".errorMessage_email")[0].innerHTML = ` `;
-// });
-
-// allInput[2]?.addEventListener("click", function () {
-//   label[2].style.top = "0";
-//   label[2].style.color = "#049f8d";
-//   label[2].style.background = "#fff";
-// });
-
-// // 4 input box
-// allInput[3]?.addEventListener("input", (event) => {
-//   contactPageAllFormValues["firstName"] = event.target.value;
-//   allInput[3].style.border = "1px solid #ddd";
-//   document.querySelectorAll(".errorMessage_firstName")[0].innerHTML = ` `;
-// });
-
-// allInput[3]?.addEventListener("click", function () {
-//   label[3].style.top = "0";
-//   label[3].style.color = "#049f8d";
-//   label[3].style.background = "#fff";
-// });
-
-// // 5 input box
-// allInput[4]?.addEventListener("input", (event) => {
-//   contactPageAllFormValues["lastName"] = event.target.value;
-//   allInput[4].style.border = "1px solid #ddd";
-//   document.querySelectorAll(".errorMessage_lastName")[0].innerHTML = ` `;
-// });
-
-// allInput[4]?.addEventListener("click", function () {
-//   label[4].style.top = "0";
-//   label[4].style.color = "#049f8d";
-//   label[4].style.background = "#fff";
-// });
 
 // input box validation with focus & blur & input value change
 input_groups?.forEach((element) => {
