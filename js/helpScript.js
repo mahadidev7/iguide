@@ -45,21 +45,63 @@ function removeActiveAccordionHelp() {
   }
 }
 
+// function accordionToggleItemHelp() {
+//   [...accordionItemHelp]?.map((item, index) => (
+//     item.addEventListener("click", function () {
+//       if(accordionBodyGroup[index].classList.contains("active")){
+//         removeActiveAccordionHelp()
+//         return
+//       }
+//       removeActiveAccordionHelp();
+//       accordionBodyGroup[index].classList.add("active");
+//       downIcon[index].style.transform = "rotate(180deg)";
+//     })
+//   ));
+// }
+
+// function accordionToggleItemHelp(itemNumber) {
+//   [...accordionItemHelp]?.map((item, index) => {
+//     if (item?.classList.contains(itemNumber)) {
+
+//       item.addEventListener("click", function () {
+//         console.log(item);
+//       })
+
+//       return
+//     }
+//     console.log("00");
+//     return;
+//   });
+// }
+
 accordionItemHelp[0]?.addEventListener("click", function () {
+  if (accordionBodyGroup[0].classList.contains("active")) {
+    removeActiveAccordionHelp();
+    return;
+  }
   removeActiveAccordionHelp();
   accordionBodyGroup[0].classList.add("active");
   downIcon[0].style.transform = "rotate(180deg)";
 });
 accordionItemHelp[1]?.addEventListener("click", function () {
+  if (accordionBodyGroup[1].classList.contains("active")) {
+    removeActiveAccordionHelp();
+    return;
+  }
   removeActiveAccordionHelp();
   accordionBodyGroup[1].classList.add("active");
   downIcon[1].style.transform = "rotate(180deg)";
 });
 accordionItemHelp[2]?.addEventListener("click", function () {
+  if (accordionBodyGroup[2].classList.contains("active")) {
+    removeActiveAccordionHelp();
+    return;
+  }
   removeActiveAccordionHelp();
   accordionBodyGroup[2].classList.add("active");
   downIcon[2].style.transform = "rotate(180deg)";
 });
+
 searchButtonStepOne[0]?.addEventListener("click", function () {
   stepOneHelp[0].style.display = "none";
   stepTwoHelp[0].style.display = "block";

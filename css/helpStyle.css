@@ -12,10 +12,13 @@
 .searchDivGroup{
     margin: 0px auto;
     width: 950px;
-    max-width: 100%;
+    max-width: 100% !important;
 }
 .searchDivGroup p{
-    margin-bottom: 20px;
+    margin-bottom: 20px  !important;
+    width: 800px;
+    max-width: 100% !important;
+    margin: auto;
 }
 .searchDivGroup .searchTitle, .stepTwoHelp .searchTitle,  .stepThreeHelp .searchTitle{
     font-size: 2rem;
