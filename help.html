@@ -173,7 +173,7 @@
                 <div class="helpAccordionGroup">
                     <h3>Common Questions</h3>
                     <div class="AccordionForHelp">
-                        <div class="accordionItem one" >
+                        <div class="accordionItem one">
                             <div class="accordionHeader">
                                 <p>How do I get started?</p>
                                 <img src="./img/down-arrows.png" alt="down-arrows" class="downIcon">
@@ -187,7 +187,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordionItem two" >
+                        <div class="accordionItem two">
                             <div class="accordionHeader">
                                 <p>How do I get started?</p>
                                 <img src="./img/down-arrows.png" alt="down-arrows" class="downIcon">
@@ -201,7 +201,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="accordionItem three" >
+                        <div class="accordionItem three">
                             <div class="accordionHeader">
                                 <p>How do I get started?</p>
                                 <img src="./img/down-arrows.png" alt="down-arrows" class="downIcon">
@@ -224,31 +224,33 @@
                     <form class="helpForm" name="helpForm" onsubmit="event.preventDefault(); return helpFormHandler()"
                         autocomplete="off">
                         <div class="input_group messageHelp">
-                            <textarea id="s1" name="message" class="input PleaseDescribeYourRequest"></textarea>
+                            <textarea id="s1" name="message" class="input PleaseDescribeYourRequest"  errorMessage="This input box is required."></textarea>
 
                             <label for="s1">Please describe your request</label>
-                            <div class="errorMessage_messageHelp">
+                            <div class="errorDiv">
 
                             </div>
                         </div>
                         <h3 class="text-center subTitle">Your Contact Details</h3>
                         <div class="input_group">
-                            <input type="email" name="email" name="sEmail" class="input" />
+                            <input type="email" name="email" id="sEmail" class="input" errorMessage="Email is required." autocomplete="nope"/>
                             <label for="sEmail">Email</label>
-                            <div class="errorMessage_emailHelp">
+                            <div class="errorDiv">
                             </div>
                         </div>
                         <div class="input_group">
-                            <input type="text" name="firstName" class="input" id="sFirstName" autocomplete="nope" />
+                            <input type="text" name="firstName" class="input" id="sFirstName" errorMessage="First Name is required.
+
+                            " autocomplete="nope" />
                             <label for="sFirstName">First Name</label>
-                            <div class="errorMessage_firstNameHelp">
+                            <div class="errorDiv">
 
                             </div>
                         </div>
                         <div class="input_group">
-                            <input type="text" name="lastName" class="input" id="sLastName" autocomplete="nope" />
+                            <input type="text" name="lastName" class="input" id="sLastName"  errorMessage="Last Name is required." autocomplete="nope" />
                             <label for="sLastName">Last Name</label>
-                            <div class="errorMessage_lastNameHelp">
+                            <div class="errorDiv">
 
                             </div>
                         </div>
