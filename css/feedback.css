@@ -1,0 +1,57 @@
+.stepTwoHelp p{
+    margin: 20px auto;
+    width: 800px;
+    max-width: 100% !important;
+    text-align: center;
+}
+.searchTitle{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.stepTwoHelp form {
+    border: 1px solid #1558d6;
+    margin: 20px auto;
+    width: 650px;
+    max-width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 15px;
+}
+
+.input_group.messageFeedbackForm {
+    width: 580px;
+    max-width: 100%;
+}
+
+form.FeedbackForm{
+    padding-bottom: 30px;
+}
+
+p.error {
+    color: #b00020;
+    margin-top: -10px;
+}
+.feedbackSuccessDiv{
+    border: 1px solid #1558d6;
+    margin: 20px auto;
+    width: 650px;
+    max-width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 5px;
+}
+
+.stepThreeHelp{
+    display: none;
+}
+
+
+
+
