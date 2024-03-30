@@ -1,4 +1,4 @@
-.stepTwoHelp p{
+.stepOneFeedback p{
     margin: 20px auto;
     width: 800px;
     max-width: 100% !important;
@@ -9,7 +9,7 @@
     font-size: 2rem;
 }
 
-.stepTwoHelp form {
+.stepOneFeedback form {
     border: 1px solid #1558d6;
     margin: 20px auto;
     width: 650px;
@@ -48,7 +48,7 @@ p.error {
     padding: 5px;
 }
 
-.stepThreeHelp{
+.stepTwoFeedback{
     display: none;
 }
 

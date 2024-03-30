@@ -151,7 +151,7 @@
             <div class="feedbackCenterImgGroup">
                 <img src="https:\\www.iguide.net/feedback/feedbackman.jpg" alt="feedbackBoy" class="circlegirlIMG">
             </div>
-            <div class="stepTwoHelp">
+            <div class="stepOneFeedback">
                 <p>Did you spot a hiccup or have a cool tweak in mind? We're all ears! Drop your thoughts in the form
                     below-every whisper, cheer, and moan reaches us. Your insights are key to sprucing up iGuide. So, go
                     on, share away and thanks for being part of the journey!</p>
@@ -160,31 +160,30 @@
                     <form class="FeedbackForm" name="FeedbackForm"
                         onsubmit="event.preventDefault(); return feedbackFormHandler()" autocomplete="off">
                         <div class="input_group messageFeedbackForm">
-                            <textarea id="s1" name="message" class="input PleaseDescribeYourRequest"></textarea>
+                            <textarea id="s1" name="message" class="input" errorMessage="This input box is required" ></textarea>
 
                             <label for="s1">Be kind...</label>
-                            <div class="errorMessage_messageFeedback">
-
+                            <div class="errorDiv">
                             </div>
                         </div>
                         <h3 class="text-center subTitle">Your Contact Details</h3>
                         <div class="input_group">
-                            <input type="email" name="email" name="sEmail" class="input" />
+                            <input type="email" name="email" id="sEmail" class="input" autocomplete="nope" errorMessage="Email is required"  />
                             <label for="sEmail">Email</label>
-                            <div class="errorMessage_emailFeedback">
+                            <div class="errorDiv">
                             </div>
                         </div>
                         <div class="input_group">
-                            <input type="text" name="firstName" class="input" id="sFirstName" autocomplete="nope" />
+                            <input type="text" name="firstName" class="input" id="sFirstName" autocomplete="nope" errorMessage="First Name is required"  />
                             <label for="sFirstName">First Name</label>
-                            <div class="errorMessage_firstNameFeedback">
+                            <div class="errorDiv">
 
                             </div>
                         </div>
                         <div class="input_group">
-                            <input type="text" name="lastName" class="input" id="sLastName" autocomplete="nope" />
+                            <input type="text" name="lastName" class="input" id="sLastName" autocomplete="nope" errorMessage="Last Name is required"  />
                             <label for="sLastName">Last Name</label>
-                            <div class="errorMessage_lastNameFeedback">
+                            <div class="errorDiv">
 
                             </div>
                         </div>
@@ -194,7 +193,7 @@
                     </form>
                 </div>
             </div>
-            <div class="stepThreeHelp">
+            <div class="stepTwoFeedback">
                 <h1 class="searchTitle">We appreciate! We will get right om it!</h1>
                 <div class="feedbackSuccessDiv">
                     <div class="mahadidev7_flex">
