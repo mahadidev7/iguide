@@ -9,29 +9,16 @@ function closeMenuHandler() {
   mobileMenu.style.display = "none";
 }
 
-// =================== help page javascript codes is here =========================
-
-let accordionBodyGroup = document.querySelectorAll(
-  ".AccordionForHelp .accordionBodyGroup"
-);
-let accordionItemsHelp = document.querySelectorAll(
-  ".AccordionForHelp .accordionItem"
-);
+// =================== javascript codes is here of help page =========================
 
 let accordionHeads = document.querySelectorAll(".accordionHeader");
-let downIcons = document.querySelectorAll(
-  ".AccordionForHelp .accordionItem .downIcons"
-);
 let searchButtonStepOne = document.querySelectorAll(".searchButtonStepOne");
 let stepOneHelp = document.querySelectorAll(".stepOneHelp");
 let stepTwoHelp = document.querySelectorAll(".stepTwoHelp");
 let stepThreeHelp = document.querySelectorAll(".stepThreeHelp");
-
 let input_groups = document.querySelectorAll(".input_group");
 
-let allInput = document.querySelectorAll(".input");
-let label = document.querySelectorAll("label");
-
+// store form elements values of help page
 let helpFormValue = {
   message: "",
   email: "",
@@ -39,6 +26,7 @@ let helpFormValue = {
   lastName: "",
 };
 
+// according function of help page
 accordionHeads.forEach((accordionHeadItem) => {
   let accordionTitle = accordionHeadItem.parentElement;
   let bodyDiv = accordionTitle.querySelector(".accordionBodyGroup");
@@ -119,7 +107,7 @@ input_groups?.forEach((element) => {
   });
 });
 
-// form submit of step 2
+// form submit handler of step 2 of help page
 function helpFormHandler() {
   // success
   if (

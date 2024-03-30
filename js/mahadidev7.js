@@ -1,33 +1,11 @@
-let accordingBodyContent = document.getElementsByClassName(
-  "accordingBodyContent"
-);
 let accordingItem = document.querySelectorAll(".accordingItem");
-
-let step_one = document.querySelectorAll(".step_one");
-let step_two = document.querySelectorAll(".step_two");
-let step_three = document.querySelectorAll(".step_three");
-let step_four = document.querySelectorAll(".step_four");
-
 let step2a = document.querySelectorAll(".step2a");
 let step2b = document.querySelectorAll(".step2b");
-
 let mobileMenu = document.querySelectorAll(".mobileMenu")[0];
 let closeMenu = document.querySelectorAll(".closeMenu");
-
-let step_oneItem = document.querySelectorAll(".step_oneItem")[0];
-let step_twoItem = document.querySelectorAll(".step_twoItem")[0];
-let step_threeItem = document.querySelectorAll(".step_threeItem")[0];
-let step_fourItem = document.querySelectorAll(".step_fourItem")[0];
-
 let ActiveSubmit = document.querySelectorAll(".ActiveSubmit")[0];
 let inactiveSubmit = document.querySelectorAll(".inactiveSubmit")[0];
-
 let input_groups = document.querySelectorAll(".input_group");
-
-let label = document.querySelectorAll("label");
-
-let allInput = document.querySelectorAll(".input");
-let arrayOfInput = [...allInput];
 
 // mobile menu berger code is hare
 // menu open handler
@@ -109,10 +87,6 @@ function step2aHandler(data) {
   contactPageAllFormValues["ChooseTheBestDescriptionOfYourIssue"] = data;
   step2a[0].style.display = "none";
   step2b[0].style.display = "block";
-
-  // document.querySelectorAll(".step_twoHead .resultQuestion")[0].innerText =
-  //   "Choose the best description of your issue";
-  // document.querySelectorAll(".step_twoHead .resultAnswer")[0].innerText = data;
 }
 // 2b
 function step2bHandler() {
@@ -131,7 +105,7 @@ function step2bHandler() {
 
   inputTag.style.border = "1px solid #b00020";
   labelTag.style.color = "#b00020";
-  label[1].style.top = "25px";
+  labelTag.style.top = "25px";
   errorDiv.innerHTML = `<p class="error">${inputTag?.getAttribute(
     "errorMessage"
   )}</p>`;
@@ -157,7 +131,7 @@ function stepThreeHandler() {
 
     console.log("=====contactPageAllFormValues===============================");
     console.log(contactPageAllFormValues);
-    
+
     return;
   }
 
